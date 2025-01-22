@@ -1,8 +1,13 @@
 ## Assessment - Module 1
 
-**The terminal log file is available [here](terminal.log)**
+**The terminal log file is available [here](terminal.log)**. 
 
-`cat terminal.log` to view the log file.
+Download and `cat` the log file
+
+```bash
+wget https://raw.githubusercontent.com/Sharath15eUR/Ritvik/refs/heads/main/Ritvik_Linux_Training_Module_1/terminal.log && cat terminal.log
+```
+
 
 ___
 
