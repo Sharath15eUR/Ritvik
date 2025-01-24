@@ -2,7 +2,7 @@ ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1$ mkdir dir1
 ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1$ cd dir1/
 ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1$ mkdir dir2
 ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1$ cd dir2/
-ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1/dir2$ echo "Quesecho "Question 3" >> ques3
+ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1/dir2$ echo "Question 3" >> ques3
 ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1/dir2$ cd ..
 ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1$ ls
 dir2
