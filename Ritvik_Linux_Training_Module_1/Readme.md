@@ -18,12 +18,20 @@ touch ques1
 chmod a+x ques1
 ```
 
+[Solution 1](./Q1.txt)
+
+___
+
 **Question 2 : Create a file and remove write permission for group user alone.**
 
 ```bash
 touch ques2
 chmod g-w ques2
 ```
+
+[Solution 2](./Q2.txt)
+
+___
 
 **Question 3 : Create a file and add a softlink to the file in different directory (Eg : Create a file in dir1/dir2/file and create a softlink for file inside dir1)**
 
@@ -37,11 +45,19 @@ cd ..
 ln ./dir2/ques3 ques3_lnk
 ```
 
+[Solution 3](./Q3.txt)
+
+___
+
 **Question 4 : Use ps command with options to display all active process running on the system**
 
 ```bash
 ps ax
 ```
+
+[Solution 4](./Q4.txt)
+
+___
 
 **Question 5 : Create 3 files in a dir1 and re-direct the output of list command with sorted by timestamp of the files to a file**
 
@@ -49,3 +65,5 @@ ps ax
 touch a_ques5 z_ques5 _ques5
 ls -l --sort=time >> ques5_sorted.txt
 ```
+
+[Solution 5](./Q5.txt)
