@@ -1,0 +1,359 @@
+ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1$ ps ax
+    PID TTY      STAT   TIME COMMAND
+      1 ?        Ss     0:02 /sbin/init splash
+      2 ?        S      0:00 [kthreadd]
+      3 ?        S      0:00 [pool_workqueue_release]
+      4 ?        I<     0:00 [kworker/R-rcu_g]
+      5 ?        I<     0:00 [kworker/R-slub_]
+      6 ?        I<     0:00 [kworker/R-netns]
+      8 ?        I<     0:00 [kworker/0:0H-events_highpri]
+     11 ?        I<     0:00 [kworker/R-mm_pe]
+     12 ?        I      0:00 [rcu_tasks_kthread]
+     13 ?        I      0:00 [rcu_tasks_rude_kthread]
+     14 ?        I      0:00 [rcu_tasks_trace_kthread]
+     15 ?        S      0:01 [ksoftirqd/0]
+     16 ?        I      0:04 [rcu_preempt]
+     17 ?        S      0:00 [rcu_exp_par_gp_kthread_worker/0]
+     18 ?        S      0:00 [rcu_exp_gp_kthread_worker]
+     19 ?        S      0:00 [migration/0]
+     20 ?        S      0:00 [idle_inject/0]
+     21 ?        S      0:00 [cpuhp/0]
+     22 ?        S      0:00 [cpuhp/1]
+     23 ?        S      0:00 [idle_inject/1]
+     24 ?        S      0:00 [migration/1]
+     25 ?        S      0:00 [ksoftirqd/1]
+     27 ?        I<     0:00 [kworker/1:0H-events_highpri]
+     28 ?        S      0:00 [cpuhp/2]
+     29 ?        S      0:00 [idle_inject/2]
+     30 ?        S      0:00 [migration/2]
+     31 ?        S      0:00 [ksoftirqd/2]
+     33 ?        I<     0:00 [kworker/2:0H-events_highpri]
+     34 ?        S      0:00 [cpuhp/3]
+     35 ?        S      0:00 [idle_inject/3]
+     36 ?        S      0:00 [migration/3]
+     37 ?        S      0:00 [ksoftirqd/3]
+     39 ?        I<     0:00 [kworker/3:0H-events_highpri]
+     40 ?        S      0:00 [cpuhp/4]
+     41 ?        S      0:00 [idle_inject/4]
+     42 ?        S      0:00 [migration/4]
+     43 ?        S      0:00 [ksoftirqd/4]
+     45 ?        I<     0:00 [kworker/4:0H-events_highpri]
+     46 ?        S      0:00 [cpuhp/5]
+     47 ?        S      0:00 [idle_inject/5]
+     48 ?        S      0:00 [migration/5]
+     49 ?        S      0:00 [ksoftirqd/5]
+     51 ?        I<     0:00 [kworker/5:0H-events_highpri]
+     52 ?        S      0:00 [cpuhp/6]
+     53 ?        S      0:00 [idle_inject/6]
+     54 ?        S      0:00 [migration/6]
+     55 ?        S      0:00 [ksoftirqd/6]
+     57 ?        I<     0:00 [kworker/6:0H-events_highpri]
+     58 ?        S      0:00 [cpuhp/7]
+     59 ?        S      0:00 [idle_inject/7]
+     60 ?        S      0:00 [migration/7]
+     61 ?        S      0:09 [ksoftirqd/7]
+     63 ?        I<     0:00 [kworker/7:0H-kblockd]
+     64 ?        S      0:00 [kdevtmpfs]
+     65 ?        I<     0:00 [kworker/R-inet_]
+     66 ?        S      0:00 [kauditd]
+     68 ?        S      0:00 [khungtaskd]
+     69 ?        S      0:00 [oom_reaper]
+     71 ?        I<     0:00 [kworker/R-write]
+     72 ?        S      0:03 [kcompactd0]
+     73 ?        SN     0:00 [ksmd]
+     74 ?        SN     0:00 [khugepaged]
+     75 ?        I<     0:00 [kworker/R-kinte]
+     76 ?        I<     0:00 [kworker/R-kbloc]
+     77 ?        I<     0:00 [kworker/R-blkcg]
+     79 ?        S      0:00 [irq/9-acpi]
+     83 ?        I<     0:00 [kworker/R-tpm_d]
+     84 ?        I<     0:00 [kworker/R-ata_s]
+     85 ?        I<     0:00 [kworker/R-md]
+     86 ?        I<     0:00 [kworker/R-md_bi]
+     87 ?        I<     0:00 [kworker/R-edac-]
+     88 ?        I<     0:00 [kworker/R-devfr]
+     89 ?        S      0:00 [watchdogd]
+     91 ?        I<     0:00 [kworker/5:1H-events_highpri]
+     92 ?        S      0:28 [kswapd0]
+     93 ?        S      0:00 [ecryptfs-kthread]
+     94 ?        I<     0:00 [kworker/R-kthro]
+     95 ?        S      0:00 [irq/123-aerdrv]
+     96 ?        S      0:00 [irq/123-pcie-dpc]
+     97 ?        S      0:00 [irq/124-aerdrv]
+     98 ?        S      0:00 [irq/124-pcie-dpc]
+     99 ?        S      0:00 [irq/125-aerdrv]
+    100 ?        S      0:00 [irq/125-pcie-dpc]
+    104 ?        I<     0:00 [kworker/R-acpi_]
+    105 ?        S      0:00 [hwrng]
+    106 ?        I<     0:00 [kworker/R-mld]
+    107 ?        I<     0:00 [kworker/6:1H-kblockd]
+    108 ?        I<     0:00 [kworker/R-ipv6_]
+    116 ?        I<     0:00 [kworker/R-kstrp]
+    123 ?        I<     0:00 [kworker/R-crypt]
+    132 ?        I<     0:00 [kworker/R-charg]
+    153 ?        I<     0:00 [kworker/3:1H-events_highpri]
+    157 ?        I<     0:00 [kworker/1:1H-kblockd]
+    168 ?        I<     0:00 [kworker/2:1H-kblockd]
+    169 ?        I<     0:00 [kworker/7:1H]
+    170 ?        I<     0:00 [kworker/4:1H-events_highpri]
+    171 ?        I<     0:00 [kworker/0:1H-kblockd]
+    197 ?        I<     0:00 [kworker/R-nvme-]
+    198 ?        I<     0:00 [kworker/R-nvme-]
+    199 ?        I<     0:00 [kworker/R-nvme-]
+    200 ?        I<     0:00 [kworker/R-nvme-]
+    201 ?        S      0:00 [scsi_eh_0]
+    202 ?        I<     0:00 [kworker/R-scsi_]
+    207 ?        S      0:03 [irq/74-ELAN0710:01]
+    210 ?        S      0:00 [irq/18-alcor_sdmmc]
+    216 ?        I<     0:00 [kworker/R-ttm]
+    217 ?        S      0:00 [card1-crtc0]
+    218 ?        S      0:00 [card1-crtc1]
+    219 ?        S      0:00 [card1-crtc2]
+    277 ?        I<     0:00 [kworker/R-raid5]
+    323 ?        S      0:00 [jbd2/nvme0n1p3-8]
+    324 ?        I<     0:00 [kworker/R-ext4-]
+    385 ?        SNs    0:01 /lib/systemd/systemd-journald
+    421 ?        SNs    0:00 /lib/systemd/systemd-udevd
+    579 ?        S      0:00 [irq/146-mei_me]
+    628 ?        I<     0:00 [kworker/R-cfg80]
+    653 ?        S      0:18 [irq/147-iwlwifi]
+    764 ?        SNs    0:00 /sbin/mount.ntfs-3g /dev/sda3 /mnt/D -o rw,nosuid,nodev,uid=1000,gid=1000
+    767 ?        SNs    0:00 /sbin/mount.ntfs-3g /dev/sda4 /mnt/E -o rw,nosuid,nodev,uid=1000,gid=1000
+    773 ?        I<     0:00 [kworker/R-kdmfl]
+    778 ?        I<     0:00 [kworker/R-kcryp]
+    779 ?        I<     0:00 [kworker/R-kcryp]
+    780 ?        S      0:00 [dmcrypt_write/252:0]
+    781 ?        S      0:00 [nv_queue]
+    782 ?        S      0:00 [nv_queue]
+    783 ?        S      0:00 [nv_open_q]
+    854 ?        SNs    0:00 /sbin/rpcbind -f -w
+    859 ?        SNs    0:02 /lib/systemd/systemd-resolved
+    898 ?        I<     0:00 [kworker/R-rpcio]
+    899 ?        I<     0:00 [kworker/R-xprti]
+    903 ?        S      0:00 [nvidia-modeset/kthread_q]
+    904 ?        S      0:00 [nvidia-modeset/deferred_close_kthread_q]
+    908 ?        S      0:01 [irq/149-nvidia]
+    910 ?        S      0:00 [nvidia]
+    911 ?        S      0:00 [nv_queue]
+   1027 ?        SNs    0:00 /usr/bin/dbus-broker-launch --scope system --audit
+   1028 ?        S      0:01 dbus-broker --log 4 --controller 9 --machine-id 0aa0e1853eea63bf368c78c765da2e85 --max-byt
+   1029 ?        SNsl   0:02 /usr/sbin/NetworkManager --no-daemon
+   1030 ?        SNsl   0:00 /usr/libexec/accounts-daemon
+   1031 ?        SNs    0:01 /usr/sbin/acpid
+   1034 ?        SNs    0:00 avahi-daemon: running [jarvis.local]
+   1036 ?        SN     0:03 /usr/sbin/atopacctd
+   1039 ?        SNs    0:00 /usr/lib/bluetooth/bluetoothd
+   1041 ?        SNs    0:06 /usr/bin/system76-power daemon
+   1042 ?        SNsl   0:02 /usr/bin/system76-scheduler daemon
+   1043 ?        SNs    0:00 /usr/sbin/cron -f -P
+   1049 ?        SNs    0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+   1054 ?        SNsl   0:01 /usr/libexec/polkitd --no-debug
+   1057 ?        SNsl   0:00 /usr/sbin/rsyslogd -n -iNONE
+   1062 ?        SNsl   0:04 /usr/lib/snapd/snapd
+   1065 ?        SNsl   0:00 /usr/libexec/switcheroo-control
+   1068 ?        SNs    0:00 /lib/systemd/systemd-logind
+   1069 ?        SNsl   0:03 /usr/sbin/thermald --systemd --dbus-enable --adaptive
+   1072 ?        SNsl   0:24 /usr/bin/touchegg --daemon
+   1074 ?        SNsl   0:01 /usr/libexec/udisks2/udisksd
+   1078 ?        SNs    0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+   1082 ?        SN     0:00 avahi-daemon: chroot helper
+   1102 ?        SNsl   0:00 /usr/sbin/ModemManager
+   1125 ?        SNs    0:00 /usr/sbin/cupsd -l
+   1134 ?        SNs    0:00 /bin/sh /snap/cups/1067/scripts/run-cups-browsed
+   1137 ?        SNs    0:00 /bin/sh /snap/cups/1067/scripts/run-cupsd
+   1162 ?        S      0:00 /usr/lib/cups/notifier/dbus dbus://
+   1163 ?        S      0:00 /usr/lib/cups/notifier/dbus dbus://
+   1164 ?        S      0:00 /usr/lib/cups/notifier/dbus dbus://
+   1165 ?        S      0:00 /usr/lib/cups/notifier/dbus dbus://
+   1200 ?        SNsl   0:00 /usr/libexec/upowerd
+   1204 ?        SNsl   0:06 /usr/bin/containerd
+   1229 ?        SNs    0:00 /usr/lib/postgresql/14/bin/postgres -D /var/lib/postgresql/14/main -c config_file=/etc/pos
+   1233 ?        SN     0:00 /usr/sbin/chronyd -F 1
+   1234 ?        SN     0:00 /usr/sbin/chronyd -F 1
+   1282 ?        SNs    0:00 postgres: 14/main: checkpointer 
+   1283 ?        SNs    0:00 postgres: 14/main: background writer 
+   1284 ?        SNs    0:00 postgres: 14/main: walwriter 
+   1285 ?        SNs    0:00 postgres: 14/main: autovacuum launcher 
+   1286 ?        SNs    0:00 postgres: 14/main: stats collector 
+   1287 ?        SNs    0:00 postgres: 14/main: logical replication launcher 
+   1320 ?        SN     0:07 /usr/bin/python3 /usr/sbin/execsnoop-bpfcc
+   1401 ?        S      0:00 [UVM global queue]
+   1402 ?        S      0:00 [UVM deferred release queue]
+   1404 ?        S      0:00 [UVM Tools Event Queue]
+   1427 ?        Ss     0:00 /usr/bin/nvidia-persistenced --user nvidia-persistenced --no-persistence-mode --verbose
+   1445 ?        Ssl    0:00 /usr/sbin/gdm3
+   1510 ?        SNsl   0:00 /usr/libexec/rtkit-daemon
+   1556 ?        S<     0:00 [krfcommd]
+   1762 ?        SN     0:00 cupsd -f -s /var/snap/cups/common/etc/cups/cups-files.conf -c /var/snap/cups/common/etc/cu
+   1773 ?        SNl    0:00 /usr/bin/system76-scheduler pipewire
+   1787 ?        SN     0:00 /bin/sh /snap/cups/1067/scripts/run-cups-browsed
+   1802 ?        Ssl    0:08 /usr/libexec/packagekitd
+   1976 ?        Ssl    0:00 /usr/libexec/colord
+   2244 ?        SNsl   0:01 /usr/bin/pop-system-updater
+   2245 ?        SNsl   0:00 /usr/sbin/cups-browsed
+   2246 ?        SNsl   0:01 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+   2293 ?        Sl     0:12 /opt/teamviewer/tv_bin/teamviewerd -d
+   2306 ?        I<     0:00 [kworker/R-iprt-]
+   2314 ?        S      0:00 [iprt-VBoxTscThread]
+   3713 ?        SNl    0:00 gdm-session-worker [pam/gdm-password]
+   3725 ?        Ss     0:00 /lib/systemd/systemd --user
+   3726 ?        S      0:00 (sd-pam)
+   3735 ?        S<sl   0:00 /usr/bin/pipewire
+   3737 ?        S<sl   0:00 /usr/bin/wireplumber
+   3739 ?        S<Lsl   0:00 /usr/bin/pipewire-pulse
+   3741 ?        SNs    0:00 /usr/bin/dbus-broker-launch --scope user
+   3743 ?        SNLl   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+   3745 ?        S      0:01 dbus-broker --log 4 --controller 10 --machine-id 0aa0e1853eea63bf368c78c765da2e85 --max-by
+   3746 ?        SNsl   0:01 /usr/libexec/fwupd/fwupd
+   3765 tty2     SNsl+   0:00 /usr/libexec/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=pop /usr/bin/gnome-s
+   3767 tty2     S<l+   5:42 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -nolisten tcp -bac
+   3779 tty2     SNl+   0:00 /usr/libexec/gnome-session-binary --session=pop
+   3834 ?        SNsl   0:00 /usr/libexec/at-spi-bus-launcher
+   3839 ?        SN     0:00 /usr/bin/dbus-broker-launch --config-file=/usr/share/defaults/at-spi2/accessibility.conf -
+   3840 ?        S      0:00 dbus-broker --log 4 --controller 9 --machine-id 0aa0e1853eea63bf368c78c765da2e85 --max-byt
+   3852 ?        SNsl   0:00 /usr/libexec/gnome-session-ctl --monitor
+   3861 ?        SNsl   0:00 /usr/libexec/gvfsd
+   3869 ?        SNl    0:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+   3871 ?        SNsl   0:00 /usr/libexec/gnome-session-binary --systemd-service --session=pop
+   3899 ?        S<sl   9:44 /usr/bin/gnome-shell
+   3923 ?        SNsl   0:00 /usr/libexec/xdg-permission-store
+   3925 ?        SNsl   0:00 /usr/libexec/gnome-shell-calendar-server
+   3935 ?        SNsl   0:01 /usr/libexec/evolution-source-registry
+   3940 ?        SNLsl   0:04 /usr/libexec/goa-daemon
+   3941 ?        SNsl   0:00 /usr/libexec/dconf-service
+   3944 ?        SNsl   0:00 /usr/libexec/gvfs-udisks2-volume-monitor
+   3947 ?        SNsl   0:00 /usr/libexec/gvfsd-metadata
+   3957 ?        SNsl   0:00 /usr/libexec/goa-identity-service
+   3970 ?        SNsl   0:01 /usr/libexec/evolution-calendar-factory
+   3981 ?        SNsl   0:00 /usr/libexec/gvfs-goa-volume-monitor
+   3987 ?        SNsl   0:00 /usr/libexec/gvfs-mtp-volume-monitor
+   3992 ?        SNsl   0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+   4007 ?        SNsl   0:00 /usr/libexec/gvfs-afc-volume-monitor
+   4016 ?        SNsl   0:00 /usr/libexec/evolution-addressbook-factory
+   4054 ?        SNsl   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+   4055 ?        SNsl   1:02 /usr/bin/bettercap -no-colors -eval set events.stream.output /var/log/bettercap.log; api.r
+   4056 ?        SNsl   0:02 /usr/libexec/at-spi2-registryd --use-gnome-session
+   4090 ?        SNs    0:00 sh -c /usr/bin/ibus-daemon --panel disable $([ "$XDG_SESSION_TYPE" = "x11" ] && echo "--xi
+   4091 ?        SNsl   0:00 /usr/libexec/gsd-a11y-settings
+   4093 ?        SNl    0:37 /usr/bin/ibus-daemon --panel disable --xim
+   4095 ?        SNsl   0:00 /usr/libexec/gsd-color
+   4097 ?        SNsl   0:00 /usr/libexec/gsd-datetime
+   4100 ?        SNsl   0:00 /usr/libexec/gsd-housekeeping
+   4102 ?        SNsl   0:00 /usr/libexec/gsd-keyboard
+   4103 ?        SNsl   0:00 /usr/libexec/gsd-media-keys
+   4107 ?        SNsl   0:00 /usr/libexec/gsd-power
+   4110 ?        SNsl   0:00 /usr/libexec/gsd-print-notifications
+   4113 ?        SNsl   0:00 /usr/libexec/gsd-rfkill
+   4115 ?        SNsl   0:00 /usr/libexec/gsd-screensaver-proxy
+   4117 ?        SNsl   0:00 /usr/libexec/gsd-sharing
+   4119 ?        SNsl   0:00 /usr/libexec/gsd-smartcard
+   4120 ?        SNsl   0:00 /usr/libexec/gsd-sound
+   4127 ?        SNsl   0:00 /usr/libexec/gsd-wacom
+   4133 ?        SNsl   0:00 /usr/libexec/gsd-xsettings
+   4151 ?        SNl    0:01 /usr/libexec/evolution-data-server/evolution-alarm-notify
+   4152 ?        SNl    0:00 /usr/bin/python3 /usr/lib/hidpi-daemon/hidpi-notification
+   4159 ?        SNl    0:00 /usr/bin/python3 /usr/lib/hidpi-daemon/hidpi-daemon
+   4163 ?        SNl    0:00 /usr/libexec/ibus-dconf
+   4164 ?        SNl    0:07 /usr/libexec/ibus-extension-gtk3
+   4166 ?        SNl    0:00 touchegg
+   4168 ?        SNl    0:00 /usr/libexec/ibus-x11 --kill-daemon
+   4185 ?        SNsl   0:00 /usr/libexec/ibus-portal
+   4190 ?        SNl    0:00 /usr/libexec/gsd-disk-utility-notify
+   4249 ?        SNsl   0:03 gjs /home/ritvik/.local/share/gnome-shell/extensions/gsconnect@andyholmes.github.io/servic
+   4269 ?        SNl    0:00 /usr/libexec/gsd-printer
+   4270 ?        SNl    0:00 /usr/libexec/gvfsd-http --spawner :1.23 /org/gtk/gvfs/exec_spaw/0
+   4272 ?        SNsl   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.ScreenSaver
+   4339 ?        SNl    0:10 /usr/libexec/ibus-engine-simple
+   4352 ?        SNsl   0:00 /usr/libexec/tracker-miner-fs-3
+   4359 ?        SNs    0:00 /usr/bin/python3 /usr/lib/pop-transition/service.py
+   4456 ?        SNl    0:05 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/ding.js -E -P /usr/share/gnome-s
+   4475 ?        SNl    0:00 /usr/libexec/gvfsd-trash --spawner :1.23 /org/gtk/gvfs/exec_spaw/1
+   4482 ?        SNsl   0:00 /usr/libexec/xdg-desktop-portal
+   4486 ?        SNsl   0:00 /usr/libexec/xdg-document-portal
+   4491 ?        SNs    0:00 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000
+   4495 ?        SNsl   0:03 /usr/libexec/xdg-desktop-portal-gnome
+   4523 ?        SNsl   0:00 /usr/libexec/xdg-desktop-portal-gtk
+   4562 ?        SNsl   0:00 /usr/bin/pop-system-updater
+   5344 ?        SNl    0:10 io.elementary.appcenter -s
+   5543 ?        SN     0:00 /usr/bin/ssh-agent -D -a /run/user/1000/keyring/.ssh
+   6272 ?        I      0:01 [kworker/0:0-i915-unordered]
+   9038 ?        Sl    40:11 firefox
+   9116 ?        S      0:00 /usr/lib/firefox/firefox-bin -contentproc -greomni /usr/lib/firefox/omni.ja -appomni /usr/
+   9120 ?        Sl     0:00 /usr/lib/firefox/firefox-bin -contentproc -parentBuildID 20240819150008 -prefsLen 40365 -p
+   9139 ?        Sl     0:09 /usr/lib/firefox/firefox-bin -contentproc -childID 1 -isForBrowser -prefsLen 40430 -prefMa
+   9206 ?        Sl    17:54 /usr/lib/firefox/firefox-bin -contentproc -childID 2 -isForBrowser -prefsLen 44979 -prefMa
+   9258 ?        Sl     0:00 /usr/lib/firefox/firefox-bin -contentproc -parentBuildID 20240819150008 -sandboxingKind 0 
+   9468 ?        SNl    0:00 /usr/lib/firefox/firefox-bin -contentproc -parentBuildID 20240819150008 -prefsLen 45136 -p
+   9863 ?        I      0:19 [kworker/7:0-i915-unordered]
+   9877 ?        I      0:01 [kworker/3:0-events]
+  10602 ?        Sl     0:46 /usr/lib/firefox/firefox-bin -contentproc -childID 13 -isForBrowser -prefsLen 33600 -prefM
+  11036 ?        Sl     0:18 /usr/lib/firefox/firefox-bin -contentproc -childID 14 -isForBrowser -prefsLen 33600 -prefM
+  11042 ?        Sl     3:30 /usr/lib/firefox/firefox-bin -contentproc -childID 15 -isForBrowser -prefsLen 33600 -prefM
+  12198 ?        SNl    0:00 /usr/lib/libreoffice/program/oosplash --impress
+  12237 ?        SNl    1:28 /usr/lib/libreoffice/program/soffice.bin --impress
+  12338 ?        SNl    0:00 /usr/libexec/gvfsd-network --spawner :1.23 /org/gtk/gvfs/exec_spaw/2
+  12364 ?        SNl    0:00 /usr/libexec/gvfsd-dnssd --spawner :1.23 /org/gtk/gvfs/exec_spaw/4
+  12790 ?        SNl    0:35 /usr/lib/firefox/firefox-bin -contentproc -childID 22 -isForBrowser -prefsLen 33600 -prefM
+  13068 ?        Sl     0:16 /usr/lib/firefox/firefox-bin -contentproc -childID 23 -isForBrowser -prefsLen 33600 -prefM
+  14185 ?        I      0:00 [kworker/5:1-events]
+  14289 ?        Sl     0:15 /usr/lib/firefox/firefox-bin -contentproc -childID 28 -isForBrowser -prefsLen 33600 -prefM
+  14648 ?        I      0:01 [kworker/1:0-i915-unordered]
+  14978 ?        Sl     0:30 /usr/lib/firefox/firefox-bin -contentproc -childID 30 -isForBrowser -prefsLen 33600 -prefM
+  15041 ?        Sl     1:59 /usr/lib/firefox/firefox-bin -contentproc -childID 31 -isForBrowser -prefsLen 33600 -prefM
+  15677 ?        Sl    26:41 /usr/lib/firefox/firefox-bin -contentproc -childID 32 -isForBrowser -prefsLen 33600 -prefM
+  22771 ?        Sl     0:33 /usr/lib/firefox/firefox-bin -contentproc -childID 35 -isForBrowser -prefsLen 33814 -prefM
+  24324 ?        Sl     0:15 /usr/lib/firefox/firefox-bin -contentproc -childID 37 -isForBrowser -prefsLen 33814 -prefM
+  24532 ?        Rl     0:49 /usr/bin/python3 /usr/bin/terminator
+  24561 pts/0    Ss     0:00 /bin/bash
+  24744 ?        I      0:00 [kworker/7:1-events]
+  25837 ?        I      0:00 [kworker/6:1-events]
+  26354 ?        Sl     0:15 /usr/lib/firefox/firefox-bin -contentproc -childID 40 -isForBrowser -prefsLen 33814 -prefM
+  28376 ?        SNsl   0:00 /usr/bin/speech-dispatcher -s -t 0
+  28387 ?        ZN     0:00 [sd_espeak-ng-mb] <defunct>
+  28390 ?        SNl    0:00 /usr/lib/speech-dispatcher-modules/sd_espeak-ng /etc/speech-dispatcher/modules/espeak-ng.c
+  28398 ?        S<l    0:00 /usr/lib/speech-dispatcher-modules/sd_dummy /etc/speech-dispatcher/modules/dummy.conf
+  29022 ?        I<     0:02 [kworker/u33:2-i915_flip]
+  33686 ?        I      0:00 [kworker/3:2-events]
+  33832 ?        I      0:00 [kworker/1:1-cgroup_destroy]
+  33937 ?        SN     0:00 sleep 3600
+  34204 ?        Sl     0:06 /usr/lib/firefox/firefox-bin -contentproc -childID 56 -isForBrowser -prefsLen 34115 -prefM
+  35617 ?        I      0:00 [kworker/0:2-cgroup_destroy]
+  36853 ?        I      0:00 [kworker/u32:2-events_unbound]
+  36865 ?        I      0:00 [kworker/4:2-events]
+  37482 ?        I      0:00 [kworker/2:0-i915-unordered]
+  38106 ?        SNLsl   0:51 /usr/share/code/code .
+  38109 ?        SN     0:00 /usr/share/code/code --type=zygote --no-zygote-sandbox
+  38110 ?        SN     0:00 /usr/share/code/code --type=zygote
+  38112 ?        SN     0:00 /usr/share/code/code --type=zygote
+  38135 ?        SNl    0:00 /usr/share/code/chrome_crashpad_handler --monitor-self-annotation=ptype=crashpad-handler -
+  38148 ?        SNl    0:58 /usr/share/code/code --type=gpu-process --crashpad-handler-pid=38135 --enable-crash-report
+  38176 ?        SNl    0:12 /usr/share/code/code --type=utility --utility-sub-type=network.mojom.NetworkService --lang
+  38191 ?        SNl    2:27 /usr/share/code/code --type=renderer --crashpad-handler-pid=38135 --enable-crash-reporter=
+  38212 ?        SNl    1:04 /usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US
+  38213 ?        SNl    0:00 /usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US
+  38232 ?        SNl    0:36 /usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US
+  38438 ?        SNl    0:00 /usr/share/code/code /home/ritvik/.vscode/extensions/formulahendry.auto-rename-tag-0.1.10/
+  38439 ?        SNl    0:00 /usr/share/code/code /home/ritvik/.vscode/extensions/mtxr.sqltools-0.28.3/dist/languageser
+  38493 ?        SNl    0:00 /usr/share/code/code /home/ritvik/.vscode/extensions/mongodb.mongodb-vscode-1.9.1/dist/lan
+  38494 ?        SNl    0:03 /usr/share/code/code /home/ritvik/.vscode/extensions/streetsidesoftware.code-spell-checker
+  38532 ?        SNl    0:00 /usr/share/code/code /home/ritvik/.vscode/extensions/dbaeumer.vscode-eslint-3.0.10/server/
+  38540 ?        SNl    0:00 /usr/share/code/code /usr/share/code/resources/app/extensions/json-language-features/serve
+  38935 ?        I      0:00 [kworker/6:2]
+  39101 ?        SNl    0:02 /usr/share/code/code /usr/share/code/resources/app/extensions/markdown-language-features/d
+  39155 ?        I      0:00 [kworker/u32:3-events_unbound]
+  40499 ?        SNl    0:12 /usr/share/code/code --type=renderer --crashpad-handler-pid=38135 --enable-crash-reporter=
+  40928 ?        I      0:00 [kworker/5:2-cgroup_destroy]
+  42240 ?        I      0:00 [kworker/u32:4-ext4-rsv-conversion]
+  42680 ?        I<     0:00 [kworker/u33:1-rb_allocator]
+  43918 ?        I      0:00 [kworker/4:1-events]
+  44219 ?        I      0:00 [kworker/2:2-events]
+  46470 ?        I<     0:00 [kworker/u33:0-rb_allocator]
+  47132 ?        I      0:00 [kworker/u32:0]
+  47256 ?        I      0:00 [kworker/2:1-events]
+  47336 ?        I      0:00 [kworker/4:0-events]
+  47904 pts/0    S+     0:00 script terminal.log
+  47905 pts/1    Ss     0:00 bash -i
+  47954 ?        I      0:00 [kworker/0:1-events]
+  48498 ?        I      0:00 [kworker/1:2-cgroup_destroy]
+  48530 ?        I      0:00 [kworker/u32:1]
+  48665 pts/1    R+     0:00 ps ax

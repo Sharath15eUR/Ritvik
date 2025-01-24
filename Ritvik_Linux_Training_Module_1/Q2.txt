@@ -1,0 +1,10 @@
+ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1$ touch ques2
+ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1$ ls -l
+total 0
+-rwxrwxr-x 1 ritvik ritvik 0 Jan 22 23:52 ques1
+-rw-rw-r-- 1 ritvik ritvik 0 Jan 22 23:52 ques2
+ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1$ chmod g-w ques2
+ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1$ ls -l
+total 0
+-rwxrwxr-x 1 ritvik ritvik 0 Jan 22 23:52 ques1
+-rw-r--r-- 1 ritvik ritvik 0 Jan 22 23:52 ques2
