@@ -1,5 +1,4 @@
 ## Assessment - Module 2
-___
 
 **Question 1 : Use the appropriate command to list all files larger than 1 MB in the current directory and save the output to a file.**
 
