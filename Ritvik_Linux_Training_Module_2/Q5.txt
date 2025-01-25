@@ -1,0 +1,21 @@
+ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_2$ netstat -r
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+default         reliance.relian 0.0.0.0         UG        0 0          0 wlo1
+link-local      0.0.0.0         255.255.0.0     U         0 0          0 wlo1
+172.17.0.0      0.0.0.0         255.255.0.0     U         0 0          0 docker0
+172.18.0.0      0.0.0.0         255.255.0.0     U         0 0          0 br-54075596b370
+172.19.0.0      0.0.0.0         255.255.0.0     U         0 0          0 br-ed392bbf577a
+172.20.0.0      0.0.0.0         255.255.0.0     U         0 0          0 br-3ecb722967d9
+192.168.29.0    0.0.0.0         255.255.255.0   U         0 0          0 wlo1
+ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_2$ netstat -r | awk '{if(NR>2) print $2}'
+reliance.relian
+0.0.0.0
+0.0.0.0
+0.0.0.0
+0.0.0.0
+0.0.0.0
+0.0.0.0
+ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_2$ netstat -r | awk '{if(NR>2) print $2}' | sort -u
+0.0.0.0
+reliance.relian

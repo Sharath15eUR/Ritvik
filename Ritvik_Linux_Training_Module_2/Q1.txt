@@ -1,0 +1,26 @@
+ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_2$ ls -lh
+total 80K
+-rw-rw-r-- 1 ritvik ritvik 2.0M Jan 26 00:36 bigfile1
+-rw-rw-r-- 1 ritvik ritvik 3.0M Jan 26 00:36 bigfile2
+-rw-rw-r-- 1 ritvik ritvik 4.0M Jan 26 00:36 bigfile3
+-rw-rw-r-- 1 ritvik ritvik  480 Jan 25 22:55 config.txt
+-rw-rw-r-- 1 ritvik ritvik  296 Jan 26 00:21 filtered_log.txt
+-rw-rw-r-- 1 ritvik ritvik  730 Jan 25 22:39 log.txt
+-rw-rw-r-- 1 ritvik ritvik 1.5K Jan 26 00:39 Q1.txt
+-rw-rw-r-- 1 ritvik ritvik 1.8K Jan 26 00:21 Q2.txt
+-rw-rw-r-- 1 ritvik ritvik 1.6K Jan 26 00:22 Q3.txt
+-rw-rw-r-- 1 ritvik ritvik 1.9K Jan 26 00:25 Q4.txt
+-rw-rw-r-- 1 ritvik ritvik 1.1K Jan 26 00:27 Q5.txt
+-rw-rw-r-- 1 ritvik ritvik 1.5K Jan 26 00:40 Readme.md
+-rw-rw-r-- 1 ritvik ritvik  16K Jan 25 23:59 tcpdump_log.txt
+-rw-rw-r-- 1 ritvik ritvik  20K Jan 26 00:26 terminal.log
+-rw-rw-r-- 1 ritvik ritvik  480 Jan 26 00:20 updated_config.txt
+ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_2$ ls -l | awk '/^[^d]/ {if($5>2**20) print $0}'
+-rw-rw-r-- 1 ritvik ritvik 2097152 Jan 26 00:36 bigfile1
+-rw-rw-r-- 1 ritvik ritvik 3145728 Jan 26 00:36 bigfile2
+-rw-rw-r-- 1 ritvik ritvik 4194304 Jan 26 00:36 bigfile3
+ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_2$ ls -l | awk '/^[^d]/ {if($5>2**20) print $NF}' >> large_files.txt
+ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_2$ cat large_files.txt
+bigfile1
+bigfile2
+bigfile3
