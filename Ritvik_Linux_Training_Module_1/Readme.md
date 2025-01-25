@@ -42,7 +42,7 @@ mkdir dir2
 cd dir2/
 echo "Question 3" >> ques3
 cd ..
-ln ./dir2/ques3 ques3_lnk
+ln -s ./dir2/ques3 ques3_lnk
 ```
 
 [Solution 3](./Q3.txt)

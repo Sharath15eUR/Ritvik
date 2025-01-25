@@ -1,39 +1,66 @@
 Script started on 2025-01-22 23:51:56+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="119" LINES="32"]
-[?2004h]0;ritvik@jarvis: ~/work/Ritvik[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik[00m$ exitls -l --sort=created[Ktouch a_ques5 z_ques5 _ques5ps ax[Kcat ques3_lnk ls[Kn ./dir2/ques3 ques3_lnkcd ..[Kecho "Question 3" >> ques3cd dir2/[Kmkdir dir2[2Pcd dir1/mkdir dir1[5Pls -lchmod g-w ques2[10Pls -ltouch ques2[6Pls -lchmod a+x ques1 ls -l[Ktouch ques1cd Ritvik_Linux_Training_Module_1/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkdir Ritvik_Linux_Training_Module_1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pcd Ritvik_Linux_Training_Module_1/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkdir Ritvik_Linux_Training_Module_1
-[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik[00m$ mkdir Ritvik_Linux_Training_Module_1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kls -l --sort=created[Ktouch a_ques5 z_ques5 _ques5ps ax[Kcat ques3_lnk ls[Kn ./dir2/ques3 ques3_lnkcd ..[Kecho "Question 3" >> ques3cd dir2/[Kmkdir dir2[2Pcd dir1/mkdir dir1[5Pls -lchmod g-w ques2[10Pls -ltouch ques2[6Pls -lchmod a+x ques1 ls -l[Ktouch ques1cd Ritvik_Linux_Training_Module_1/[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkdir Ritvik_Linux_Training_Module_1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pcd Ritvik_Linux_Training_Module_1/
-[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1[00m$ cd Ritvik_Linux_Training_Module_1/mkdir Ritvik_Linux_Training_Module_1exit[Kls -l --sort=created[Ktouch a_ques5 z_ques5 _ques5ps ax[Kcat ques3_lnk ls[Kn ./dir2/ques3 ques3_lnkcd ..[Kecho "Question 3" >> ques3cd dir2/[Kmkdir dir2[2Pcd dir1/mkdir dir1[5Pls -lchmod g-w ques2[10Pls -ltouch ques2[6Pls -lchmod a+x ques1 ls -l[Ktouch ques1
-[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1[00m$ ls l[K-l
-[?2004ltotal 0
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik[00m$ exitls -l --sort=created[Ktouch a_ques5 z_ques5 _ques5ps ax[Kcat ques3_lnk ls[Kn ./dir2/ques3 ques3_lnkcd ..[Kecho "Question 3" >> ques3cd dir2/[Kmkdir dir2[2Pcd dir1/mkdir dir1[5Pls -lchmod g-w ques2[10Pls -ltouch ques2[6Pls -lchmod a+x ques1 ls -l[Ktouch ques1cd Ritvik_Linux_Training_Module_1/
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkdir Ritvik_Linux_Training_Module_1
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pcd Ritvik_Linux_Training_Module_1/
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkdir Ritvik_Linux_Training_Module_1
+[?2004l
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik[00m$ mkdir Ritvik_Linux_Training_Module_1
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kls -l --sort=created[Ktouch a_ques5 z_ques5 _ques5ps ax[Kcat ques3_lnk ls[Kn ./dir2/ques3 ques3_lnkcd ..[Kecho "Question 3" >> ques3cd dir2/[Kmkdir dir2[2Pcd dir1/mkdir dir1[5Pls -lchmod g-w ques2[10Pls -ltouch ques2[6Pls -lchmod a+x ques1 ls -l[Ktouch ques1cd Ritvik_Linux_Training_Module_1/
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkdir Ritvik_Linux_Training_Module_1
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pcd Ritvik_Linux_Training_Module_1/
+[?2004l
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1[00m$ cd Ritvik_Linux_Training_Module_1/mkdir Ritvik_Linux_Training_Module_1exit[Kls -l --sort=created[Ktouch a_ques5 z_ques5 _ques5ps ax[Kcat ques3_lnk ls[Kn ./dir2/ques3 ques3_lnkcd ..[Kecho "Question 3" >> ques3cd dir2/[Kmkdir dir2[2Pcd dir1/mkdir dir1[5Pls -lchmod g-w ques2[10Pls -ltouch ques2[6Pls -lchmod a+x ques1 ls -l[Ktouch ques1
+[?2004l
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1[00m$ ls l[K-l
+[?2004l
+total 0
 -rw-rw-r-- 1 ritvik ritvik 0 Jan 22 23:52 ques1
 [?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1[00m$ chmod a+x ques1 
-[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1[00m$ ls -l
-[?2004ltotal 0
+[?2004l
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1[00m$ ls -l
+[?2004l
+total 0
 -rwxrwxr-x 1 ritvik ritvik 0 Jan 22 23:52 [0m[01;32mques1[0m
 [?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1[00m$ touch ques2
-[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1[00m$ dhmo[K[K[K[Kls -l
-[?2004ltotal 0
+[?2004l
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1[00m$ dhmo[K[K[K[Kls -l
+[?2004l
+total 0
 -rwxrwxr-x 1 ritvik ritvik 0 Jan 22 23:52 [0m[01;32mques1[0m
 -rw-rw-r-- 1 ritvik ritvik 0 Jan 22 23:52 ques2
 [?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1[00m$ chmod g-w qe[Kues2
-[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1[00m$ ls -l
-[?2004ltotal 0
+[?2004l
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1[00m$ ls -l
+[?2004l
+total 0
 -rwxrwxr-x 1 ritvik ritvik 0 Jan 22 23:52 [0m[01;32mques1[0m
 -rw-r--r-- 1 ritvik ritvik 0 Jan 22 23:52 ques2
 [?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1[00m$ mkdir dir1
-[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1[00m$ cd dir1/
-[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ mdi[K[Kkdir dir2
-[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ cd dir2/
-[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1/dir2[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1/dir2[00m$ [7mecho "Question 3" >> ques3[27mecho "Question 3" >> ques3
-[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1/dir2[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1/dir2[00m$ cd ..
-[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ ls
-[?2004l[0m[01;34mdir2[0m
-[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ lnk[K ./dir2/ques3 ques3_lnk
-[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ ls
-[?2004l[0m[01;34mdir2[0m  ques3_lnk
+[?2004l
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1[00m$ cd dir1/
+[?2004l
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ mdi[K[Kkdir dir2
+[?2004l
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ cd dir2/
+[?2004l
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1/dir2[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1/dir2[00m$ [7mecho "Question 3" >> ques3[27mecho "Question 3" >> ques3
+[?2004l
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1/dir2[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1/dir2[00m$ cd ..
+[?2004l
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ ls
+[?2004l
+[0m[01;34mdir2[0m
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ ln -sk[K ./dir2/ques3 ques3_lnk
+[?2004l
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ ls
+[?2004l
+[0m[01;34mdir2[0m  ques3_lnk
 [?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ cat ques3_lnk 
-[?2004lQuestion 3
+[?2004l
+Question 3
 [?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ ps ax
-[?2004l    PID TTY      STAT   TIME COMMAND
+[?2004l
+    PID TTY      STAT   TIME COMMAND
       1 ?        Ss     0:02 /sbin/init splash
       2 ?        S      0:00 [kthreadd]
       3 ?        S      0:00 [pool_workqueue_release]
@@ -392,23 +419,28 @@ Script started on 2025-01-22 23:51:56+05:30 [TERM="xterm-256color" TTY="/dev/pts
   48530 ?        I      0:00 [kworker/u32:1]
   48665 pts/1    R+     0:00 ps ax
 [?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ [7mtouch a_ques5 z_ques5 _ques5[27mtouch a_ques5 z_ques5 _ques5
-[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ ls -l
-[?2004ltotal 8
+[?2004l
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ ls -l
+[?2004l
+total 8
 -rw-rw-r-- 1 ritvik ritvik    0 Jan 22 23:53 a_ques5
 drwxrwxr-x 2 ritvik ritvik 4096 Jan 22 23:53 [0m[01;34mdir2[0m
 -rw-rw-r-- 2 ritvik ritvik   11 Jan 22 23:53 ques3_lnk
 -rw-rw-r-- 1 ritvik ritvik    0 Jan 22 23:53 _ques5
 -rw-rw-r-- 1 ritvik ritvik    0 Jan 22 23:53 z_ques5
 [?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ ls -l --sort=time
-[?2004ltotal 8
+[?2004l
+total 8
 -rw-rw-r-- 1 ritvik ritvik    0 Jan 22 23:53 a_ques5
 -rw-rw-r-- 1 ritvik ritvik    0 Jan 22 23:53 _ques5
 -rw-rw-r-- 1 ritvik ritvik    0 Jan 22 23:53 z_ques5
 drwxrwxr-x 2 ritvik ritvik 4096 Jan 22 23:53 [0m[01;34mdir2[0m
 -rw-rw-r-- 2 ritvik ritvik   11 Jan 22 23:53 ques3_lnk
 [?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ ls -l --sort=tie[Kme >> ques5_sorted
-[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ cat ques5_sorted 
-[?2004ltotal 8
+[?2004l
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ cat ques5_sorted 
+[?2004l
+total 8
 -rw-rw-r-- 1 ritvik ritvik    0 Jan 22 23:54 ques5_sorted
 -rw-rw-r-- 1 ritvik ritvik    0 Jan 22 23:53 a_ques5
 -rw-rw-r-- 1 ritvik ritvik    0 Jan 22 23:53 _ques5
@@ -416,6 +448,7 @@ drwxrwxr-x 2 ritvik ritvik 4096 Jan 22 23:53 [0m[01;34mdir2[0m
 drwxrwxr-x 2 ritvik ritvik 4096 Jan 22 23:53 dir2
 -rw-rw-r-- 2 ritvik ritvik   11 Jan 22 23:53 ques3_lnk
 [?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1[00m$ exit
-[?2004lexit
+[?2004l
+exit
 
 Script done on 2025-01-22 23:54:22+05:30 [COMMAND_EXIT_CODE="0"]

@@ -6,7 +6,7 @@ ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1/dir2$ echo "Ques
 ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1/dir2$ cd ..
 ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1$ ls
 dir2
-ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1$ ln ./dir2/ques3 ques3_lnk
+ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1$ ln -s ./dir2/ques3 ques3_lnk
 ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1$ ls
 dir2  ques3_lnk
 ritvik@jarvis:~/work/Ritvik/Ritvik_Linux_Training_Module_1/dir1$ cat ques3_lnk
