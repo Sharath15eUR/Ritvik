@@ -6,6 +6,12 @@
 ls -l | awk '/^[^d]/ {if($5>2**20) print $NF}' >> large_files.txt
 ```
 
+or
+
+```
+find -type f -size +1M -printf "%f\n" >> large_files.txt
+```
+
 [Solution 1](./Q1.txt)
 
 ___
