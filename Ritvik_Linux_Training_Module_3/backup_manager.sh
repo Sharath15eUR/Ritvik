@@ -3,12 +3,14 @@
 args=("$@");
 
 declare -a src_files;
+declare -a dest_files;
 declare -A duplicates;
 
-BACKUP_COUNT=0
+export BACKUP_COUNT=0
 BACKUP_SIZE=0
 
-if [[ ${#args[@]} -ne 3 ]]; then
+# insufficient or incorrect args
+if [[ ${#args[@]} -ne 3 ]] || [[ -z "${args[0]}" ]] || [[ -z "${args[1]}" ]] || [[ -z "${args[2]}" ]]; then
 	echo
 	echo "Incorrect arguments";
 	echo 
@@ -29,54 +31,91 @@ if [[ ${args[2]:0:1} != "." ]]; then
 	args[2]=".${args[2]}";
 fi
 
+
+# remove trailing / in source_dir
+if [[ ${args[0]:$(( ${#args[0]} - 1 )):1} == '/' ]]; then
+	args[0]=${args[0]:0:$((${#args[0]}-1))};
+fi
+
+# remove trailing / in backup_dir
+if [[ ${args[1]:$(( ${#args[1]} - 1 )):1} == '/' ]]; then
+	args[1]=${args[1]:0:$((${#args[1]}-1))};
+fi
+
+# check if source directory exists
+if [[ ! -d "${args[0]}" ]]; then
+	echo "Error: Source directory '${args[0]}' does not exist."
+	exit 1
+fi
+
 src_files=(${args[0]}/*${args[2]});
 
-# no matching files
-if [[ "${#src_files[@]}" -eq 0 ]]; then
-	echo "No matching files to back up."
-	echo "Exiting"
-	exit 0
+# no matching files or no files to backup
+if [[ "${#src_files[@]}" -eq 1 ]] && [[ "${src_files[0]}" == "${args[0]}/*${args[2]}" ]]; then
+    echo "No matching files to back up."
+    echo "Exiting"
+		exit 0
 fi
 
-# no dest directory - create and copy all
+# no dest directory - create backup_dir 
 if [[ ! -d "${args[1]}" ]]; then
-	
-	# mkdir "${args[1]}";
-
 	if ! mkdir -p -- "${args[1]}"; then
+		echo "Error : directory creation failed" >&2;
 		exit 1
 	fi
-
-	BACKUP_COUNT="${#src_files[@]}"
-
-	echo
-	echo "Files to be backed up"
-	echo
-
-	for file in ${src_files[@]}; do
-		cp "$file" "${args[1]}";
-		size=$(wc -c < "${file}");
-		BACKUP_SIZE=$(( "$BACKUP_SIZE" + "$size" ));
-		echo "$(echo "${file}" | awk -F "/" '{print $NF}') of size ${size} bytes".
-	done
-
-	touch report.log
-	truncate -s 0 report.log;
-	echo "Total files processed : ${BACKUP_COUNT}" >> report.log;
-	echo "Total size of files backed up : ${BACKUP_SIZE} bytes" >> report.log ;
-	echo "Path to the backup directory : ${args[1]}" >> report.log;
-	mv report.log "${args[1]}";
-	exit 0
-
 fi
 
-for file in ${src_files[@]}; do
+dest_files=(${args[1]}/*${args[2]});
+
+for file in "${src_files[@]}"; do
 	duplicates[$(echo "$file" | awk -F "/" '{print $NF}')]=1;
 done
 
+for destf in "${dest_files[@]}"; do
+	fname=$(echo "$destf" | awk -F "/" '{print $NF}');
+	if [[ ${duplicates["$fname"]} -eq 1 ]]; then
+		src_timestamp=$(stat -c %Y "${args[0]}/${fname}");
+		dest_timestamp=$(stat -c %Y "${args[1]}/${fname}");
+		if [[ "${src_timestamp}" -le "${dest_timestamp}" ]]; then
+			duplicates["$fname"]=0; 
+		fi
+	fi
+done
 
+#echo "${!duplicates[@]}"
+#echo "${duplicates[@]}"
 
-# for file in ${src_files[@]}; do
-#	echo $file;
-# done
-# echo "Total files : ${#src_files[@]}"
+echo
+echo "Files to be backed up"
+echo
+
+for fname in "${!duplicates[@]}"; do	
+	if [[ "${duplicates[$fname]}" -eq 1 ]]; then
+		BACKUP_COUNT=$(( "$BACKUP_COUNT" + 1 ))
+		fsize=$(wc -c < "${args[0]}/${fname}");
+		BACKUP_SIZE=$(( "$BACKUP_SIZE" + "$fsize" ));
+		echo "${fname} of size ${fsize} bytes".
+		cp "${args[0]}/${fname}" "${args[1]}/${fname}"
+	fi
+done
+
+touch backup_report.log
+truncate -s 0 backup_report.log;
+echo "Total files processed : ${BACKUP_COUNT}" >> backup_report.log;
+echo "Total size of files backed up : ${BACKUP_SIZE} bytes" >> backup_report.log ;
+echo "Path to the directory that was backed up : ${args[0]}" >> backup_report.log;
+echo "Path to the backup directory : ${args[1]}" >> backup_report.log;
+mv backup_report.log "${args[1]}";
+
+echo "" >> "${args[1]}/.backup_history.log";
+echo "Summary of backup at `date`" >> "${args[1]}/.backup_history.log";
+echo "" >> "${args[1]}/.backup_history.log";
+cat "${args[1]}/backup_report.log" >> "${args[1]}/.backup_history.log";
+echo "" >> "${args[1]}/.backup_history.log";
+
+echo
+echo "Report written at ${args[1]}/backup_report.log"
+echo "Backup history available at ${args[1]}/.backup_history.log"
+echo
+
+exit 0
