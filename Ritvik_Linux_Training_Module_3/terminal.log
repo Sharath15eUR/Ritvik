@@ -1,0 +1,119 @@
+Script started on 2025-01-31 11:51:01+05:30 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="112" LINES="30"]
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_3[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_3[00m$ ls -l
+[?2004ltotal 8
+-rwxrwxr-x 1 ritvik ritvik 3322 Jan 29 12:09 [0m[01;32mbackup_manager.sh[0m
+drwxrwxr-x 2 ritvik ritvik 4096 Jan 31 11:50 [01;34msrc[0m
+-rw-rw-r-- 1 ritvik ritvik    0 Jan 31 11:51 terminal.log
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_3[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_3[00m$ ./backup_manager.sh 
+[?2004l
+Incorrect arguments
+
+Required : 3
+Provided : 0
+
+Usage : ./backup_manager.sh source_dir backup_dir extension
+
+	source_dir : A directory containing files to back up.
+	backup_dir : The destination where files will be backed up.
+	extension  : A specific file extension to filter (e.g., .txt)
+
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_3[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_3[00m$ ./backup_manager.sh ./src/ ./dest/ /[K.txt
+[?2004l
+Files to be backed up
+
+f54.txt of size 16 bytes.
+newfile.txt of size 18 bytes.
+f1.txt of size 12 bytes.
+f6.txt of size 11 bytes.
+f2.txt of size 23 bytes.
+verynewfile.txt of size 24 bytes.
+
+Report written at ./dest/backup_report.log
+Backup history available at ./dest/.backup_history.log
+
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_3[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_3[00m$ ./backup_manager.sh ./src/ ./dest/ .txt[K[K[Kpng
+[?2004lNo matching files to back up.
+Exiting
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_3[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_3[00m$ ./backup_manager.sh ./src/ ./dest/ .png[K[K[Kjpg
+[?2004l
+Files to be backed up
+
+f4.jpg of size 0 bytes.
+
+Report written at ./dest/backup_report.log
+Backup history available at ./dest/.backup_history.log
+
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_3[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_3[00m$ touch /src[K[K[K[K./src/newfile_file[C[C[C[C.txt
+[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_3[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_3[00m$ touch ./src/new_file.txt./backup_manager.sh ./src/ ./dest/ .jpgpngtxtpngtxt
+[?2004l
+Files to be backed up
+
+new_file.txt of size 0 bytes.
+
+Report written at ./dest/backup_report.log
+Backup history available at ./dest/.backup_history.log
+
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_3[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_3[00m$ ls
+[?2004l[0m[01;32mbackup_manager.sh[0m  [01;34mdest[0m  [01;34msrc[0m  terminal.log
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_3[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_3[00m$ cd dest/
+[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_3/dest[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_3/dest[00m$ ls
+[?2004lbackup_report.log  f1.txt  f2.txt  [0m[01;35mf4.jpg[0m  f54.txt  f6.txt  new_file.txt  newfile.txt  verynewfile.txt
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_3/dest[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_3/dest[00m$ ca[K[Kls -l
+[?2004ltotal 28
+-rw-rw-r-- 1 ritvik ritvik 153 Jan 31 11:51 backup_report.log
+-rw-rw-r-- 1 ritvik ritvik  12 Jan 31 11:51 f1.txt
+-rw-rw-r-- 1 ritvik ritvik  23 Jan 31 11:51 f2.txt
+-rw-rw-r-- 1 ritvik ritvik   0 Jan 31 11:51 [0m[01;35mf4.jpg[0m
+-rw-rw-r-- 1 ritvik ritvik  16 Jan 31 11:51 f54.txt
+-rw-rw-r-- 1 ritvik ritvik  11 Jan 31 11:51 f6.txt
+-rw-rw-r-- 1 ritvik ritvik   0 Jan 31 11:51 new_file.txt
+-rw-rw-r-- 1 ritvik ritvik  18 Jan 31 11:51 newfile.txt
+-rw-rw-r-- 1 ritvik ritvik  24 Jan 31 11:51 verynewfile.txt
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_3/dest[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_3/dest[00m$ cat backup_report.log 
+[?2004lTotal files processed : 1
+Total size of files backed up : 0 bytes
+Path to the directory that was backed up : ./src
+Path to the backup directory : ./dest
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_3/dest[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_3/dest[00m$ ls -la
+[?2004ltotal 40
+drwxrwxr-x 2 ritvik ritvik 4096 Jan 31 11:51 [0m[01;34m.[0m
+drwxrwxr-x 4 ritvik ritvik 4096 Jan 31 11:51 [01;34m..[0m
+-rw-rw-r-- 1 ritvik ritvik  629 Jan 31 11:51 .backup_history.log
+-rw-rw-r-- 1 ritvik ritvik  153 Jan 31 11:51 backup_report.log
+-rw-rw-r-- 1 ritvik ritvik   12 Jan 31 11:51 f1.txt
+-rw-rw-r-- 1 ritvik ritvik   23 Jan 31 11:51 f2.txt
+-rw-rw-r-- 1 ritvik ritvik    0 Jan 31 11:51 [01;35mf4.jpg[0m
+-rw-rw-r-- 1 ritvik ritvik   16 Jan 31 11:51 f54.txt
+-rw-rw-r-- 1 ritvik ritvik   11 Jan 31 11:51 f6.txt
+-rw-rw-r-- 1 ritvik ritvik    0 Jan 31 11:51 new_file.txt
+-rw-rw-r-- 1 ritvik ritvik   18 Jan 31 11:51 newfile.txt
+-rw-rw-r-- 1 ritvik ritvik   24 Jan 31 11:51 verynewfile.txt
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_3/dest[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_3/dest[00m$ cat .bas[Kckup_history.log 
+[?2004l
+Summary of backup at Fri Jan 31 11:51:20 AM IST 2025
+
+Total files processed : 6
+Total size of files backed up : 104 bytes
+Path to the directory that was backed up : ./src
+Path to the backup directory : ./dest
+
+
+Summary of backup at Fri Jan 31 11:51:32 AM IST 2025
+
+Total files processed : 1
+Total size of files backed up : 0 bytes
+Path to the directory that was backed up : ./src
+Path to the backup directory : ./dest
+
+
+Summary of backup at Fri Jan 31 11:51:52 AM IST 2025
+
+Total files processed : 1
+Total size of files backed up : 0 bytes
+Path to the directory that was backed up : ./src
+Path to the backup directory : ./dest
+
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_3/dest[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_3/dest[00m$ exit
+[?2004lexit
+
+Script done on 2025-01-31 11:52:19+05:30 [COMMAND_EXIT_CODE="0"]
