@@ -1,0 +1,37 @@
+Script started on 2025-01-31 11:53:28+05:30 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="112" LINES="30"]
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_4[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_4[00m$ he[K[Kls -l
+[?2004ltotal 158740
+-rw-rw-r-- 1 ritvik ritvik 162538952 Jan 31 11:13 input.txt
+-rwxrw-r-- 1 ritvik ritvik       159 Jan 31 11:39 [0m[01;32mscript.sh[0m
+-rw-rw-r-- 1 ritvik ritvik         0 Jan 31 11:53 terminal.log
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_4[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_4[00m$ wc input.txt 
+[?2004l  3217725   6218526 162538952 input.txt
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_4[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_4[00m$ ./script.sh 
+[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_4[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_4[00m$ wc output.txt 
+[?2004l  9675  38700 377837 output.txt
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_4[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_4[00m$ head output.txt 
+[?2004l"frame.time": "Dec 31, 2024 12:50:25.890970000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:25.892357000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:25.928606000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:25.983072000 India Standard Time",
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_4[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_4[00m$ ti[Kail output.txt 
+[?2004l"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:51:11.961205000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:51:11.971335000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:51:11.972323000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_4[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_4[00m$ exit
+[?2004lexit
+
+Script done on 2025-01-31 11:53:49+05:30 [COMMAND_EXIT_CODE="0"]
