@@ -1,0 +1,131 @@
+Script started on 2025-02-01 13:22:03+05:30 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="111" LINES="28"]
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_5[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_5[00m$ ls[K[Ktree
+[?2004l[01;34m.[0m
+├── [01;34mdir[0m
+│   ├── cat.txt
+│   ├── [01;34mdir2[0m
+│   │   └── f3.txt
+│   ├── [01;34mdir3[0m
+│   │   └── f4.txt
+│   ├── f1.txt
+│   └── f2.txt
+├── [01;32mfile_analyzer.sh[0m
+├── file.txt
+└── terminal.log
+
+3 directories, 8 files
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_5[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_5[00m$ ./s[Kfile_analyzer.sh --help
+[?2004l
+	Usage: ./file_analyzer.sh [OPTIONS]
+		Search for a keyword in a file or directory.
+
+	Options:
+		-d <directory>    Directory to search recursively.
+		-f <file>         File to search.
+		-k <keyword>      Keyword to search for.
+		--help            Show this help message and exit.
+
+
+	Examples:
+		./file_analyzer.sh -d /path/to/dir -k "pattern"
+		./file_analyzer.sh -f /path/to/file -k "pattern"
+		./file_analyzer.sh -d /path/to/dir -f /path/to/file -k "pattern"
+
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_5[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_5[00m$ ./file_analyzer.sh --help[K[K[K[K[Kd dir -k ""
+[?2004lKeyword to search cannot be empty
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_5[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_5[00m$ ./file_analyzer.sh -d dir -k ""c"a"t"
+[?2004lmatch for cat found in filename dir/cat.txt
+match for cat found in file dir/cat.txt
+match for cat found in file dir/dir2/f3.txt
+match for cat found in file dir/dir3/f4.txt
+match for cat found in file dir/f1.txt
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_5[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_5[00m$ ./file_analyzer.sh -d dir -k "cat"[C[1P[1P[1P[1P[1P[1@f[C[1@ [1@f[1@o[1@;[1@e[1P[1P[1P[1@i[1@l[1@e[1@.[1@t[2@xt
+[?2004lmatch for cat found in file file.txt
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_5[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_5[00m$ ./file_analyzer.sh -f file.txt -k "cat"[C[1@-[1@d[1@ [1@d[1@i[1@r[1@ 
+[?2004lmatch for cat found in filename dir/cat.txt
+match for cat found in file dir/cat.txt
+match for cat found in file dir/dir2/f3.txt
+match for cat found in file dir/dir3/f4.txt
+match for cat found in file dir/f1.txt
+match for cat found in file file.txt
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_5[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_5[00m$ ./file_analyzer.sh -f file.txt -d dir -k "cat"[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P
+[?2004lEither provide a search directory or a search file
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_5[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_5[00m$ ./file_analyzer.sh -k "cat"[C[1P"[1P"[1P"w"o"r"l"d"
+[?2004lEither provide a search directory or a search file
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_5[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_5[00m$ ./file_analyzer.sh -k "world" -d dir -w[Kf file.txt 
+[?2004lmatch for world found in file dir/dir2/f3.txt
+match for world found in file dir/dir3/f4.txt
+match for world found in file file.txt
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_5[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_5[00m$ ./file_analyzer.sh -k "world" -d dir -f file.txt [K[K[K[K[K[K[K[K[K[K[K[K[K[K[Koesnotexist
+[?2004lSpecified path doesnotexist does not exist
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_5[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_5[00m$ ./file_analyzer.sh -k "world" -d doesnotexist[C[C[C[1P doesnotexistf doesnotexist
+[?2004lSpecified file doesnotexist does not exist
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_5[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_5[00m$ ./file_analyzer.sh 
+[?2004lNo arguments provided
+
+	Usage: ./file_analyzer.sh [OPTIONS]
+		Search for a keyword in a file or directory.
+
+	Options:
+		-d <directory>    Directory to search recursively.
+		-f <file>         File to search.
+		-k <keyword>      Keyword to search for.
+		--help            Show this help message and exit.
+
+
+	Examples:
+		./file_analyzer.sh -d /path/to/dir -k "pattern"
+		./file_analyzer.sh -f /path/to/file -k "pattern"
+		./file_analyzer.sh -d /path/to/dir -f /path/to/file -k "pattern"
+
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_5[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_5[00m$ ls
+[?2004l[0m[01;34mdir[0m  error.log  [01;32mfile_analyzer.sh[0m  file.txt  output.log  terminal.log
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_5[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_5[00m$ cat error.log 
+[?2004lSat Feb  1 01:22:16 PM IST 2025 - Keyword to search cannot be empty
+Sat Feb  1 01:22:33 PM IST 2025 - Either provide a search directory or a search file
+Sat Feb  1 01:22:38 PM IST 2025 - Either provide a search directory or a search file
+Sat Feb  1 01:22:48 PM IST 2025 - Specified path doesnotexist does not exist
+Sat Feb  1 01:22:51 PM IST 2025 - Specified file doesnotexist does not exist
+Sat Feb  1 01:22:55 PM IST 2025 - No arguments provided
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_5[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_5[00m$ cat error.log [K[K[K[K[K[K[K[K[K[Koutput.log 
+[?2004l
+Sat Feb  1 01:22:19 PM IST 2025
+./file_analyzer.sh -d dir -k cat
+
+match for cat found in file dir/cat.txt
+match for cat found in file dir/dir2/f3.txt
+match for cat found in file dir/dir3/f4.txt
+match for cat found in file dir/f1.txt
+
+Sat Feb  1 01:22:24 PM IST 2025
+./file_analyzer.sh -f file.txt -k cat
+
+match for cat found in file file.txt
+
+Sat Feb  1 01:22:28 PM IST 2025
+./file_analyzer.sh -f file.txt -d dir -k cat
+
+match for cat found in file dir/cat.txt
+match for cat found in file dir/dir2/f3.txt
+match for cat found in file dir/dir3/f4.txt
+match for cat found in file dir/f1.txt
+match for cat found in file file.txt
+
+Sat Feb  1 01:22:44 PM IST 2025
+./file_analyzer.sh -k world -d dir -f file.txt
+
+match for world found in file dir/dir2/f3.txt
+match for world found in file dir/dir3/f4.txt
+match for world found in file file.txt
+
+Sat Feb  1 01:22:48 PM IST 2025
+./file_analyzer.sh -k world -d doesnotexist
+
+
+Sat Feb  1 01:22:51 PM IST 2025
+./file_analyzer.sh -k world -f doesnotexist
+
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Linux_Training_Module_5[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Linux_Training_Module_5[00m$ exit
+[?2004lexit
+
+Script done on 2025-02-01 13:23:18+05:30 [COMMAND_EXIT_CODE="0"]

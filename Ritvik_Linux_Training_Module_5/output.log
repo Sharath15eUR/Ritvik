@@ -1,0 +1,37 @@
+
+Sat Feb  1 01:22:19 PM IST 2025
+./file_analyzer.sh -d dir -k cat
+
+match for cat found in file dir/cat.txt
+match for cat found in file dir/dir2/f3.txt
+match for cat found in file dir/dir3/f4.txt
+match for cat found in file dir/f1.txt
+
+Sat Feb  1 01:22:24 PM IST 2025
+./file_analyzer.sh -f file.txt -k cat
+
+match for cat found in file file.txt
+
+Sat Feb  1 01:22:28 PM IST 2025
+./file_analyzer.sh -f file.txt -d dir -k cat
+
+match for cat found in file dir/cat.txt
+match for cat found in file dir/dir2/f3.txt
+match for cat found in file dir/dir3/f4.txt
+match for cat found in file dir/f1.txt
+match for cat found in file file.txt
+
+Sat Feb  1 01:22:44 PM IST 2025
+./file_analyzer.sh -k world -d dir -f file.txt
+
+match for world found in file dir/dir2/f3.txt
+match for world found in file dir/dir3/f4.txt
+match for world found in file file.txt
+
+Sat Feb  1 01:22:48 PM IST 2025
+./file_analyzer.sh -k world -d doesnotexist
+
+
+Sat Feb  1 01:22:51 PM IST 2025
+./file_analyzer.sh -k world -f doesnotexist
+
