@@ -1,0 +1,94 @@
+ritvik@jarvis:~/work/Ritvik/Ritvik_Networking_Training$ sudo tcpdump -i wlo1 host rpi5-srv.local
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on wlo1, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+00:33:26.374568 IP jarvis.50298 > rpi5-srv.local.domain: 23355+ PTR? 1.29.168.192.in-addr.arpa. (43)
+00:33:26.378811 IP rpi5-srv.local.domain > jarvis.50298: 23355 NXDomain 0/1/0 (127)
+00:33:26.469335 IP jarvis.38825 > rpi5-srv.local.domain: 37668+ PTR? 95.29.168.192.in-addr.arpa. (44)
+00:33:26.471174 IP rpi5-srv.local.domain > jarvis.38825: 37668 NXDomain 0/1/0 (128)
+00:33:30.803862 ARP, Request who-has jarvis tell rpi5-srv.local, length 46
+00:33:30.803883 ARP, Reply jarvis is-at d4:d2:52:a8:72:3a (oui Unknown), length 28
+00:33:31.420342 IP jarvis.40277 > rpi5-srv.local.domain: 51280+ PTR? 1.29.168.192.in-addr.arpa. (43)
+00:33:31.424048 IP rpi5-srv.local.domain > jarvis.40277: 51280 NXDomain 0/1/0 (127)
+00:33:36.455295 IP jarvis.35134 > rpi5-srv.local.domain: 30732+ PTR? 1.29.168.192.in-addr.arpa. (43)
+00:33:36.458764 IP rpi5-srv.local.domain > jarvis.35134: 30732 NXDomain 0/1/0 (127)
+00:33:41.474478 IP jarvis.35413 > rpi5-srv.local.domain: 3425+ PTR? 1.29.168.192.in-addr.arpa. (43)
+00:33:41.480996 IP rpi5-srv.local.domain > jarvis.35413: 3425 NXDomain 0/1/0 (127)
+00:33:44.114485 ARP, Request who-has rpi5-srv.local (Broadcast) tell _gateway, length 28
+00:33:44.148521 IP jarvis.32777 > rpi5-srv.local.domain: 12660+ PTR? 1.29.168.192.in-addr.arpa. (43)
+00:33:44.152449 IP rpi5-srv.local.domain > jarvis.32777: 12660 NXDomain 0/1/0 (127)
+00:33:46.496458 IP jarvis.35501 > rpi5-srv.local.domain: 36965+ PTR? 1.29.168.192.in-addr.arpa. (43)
+00:33:46.501629 IP rpi5-srv.local.domain > jarvis.35501: 36965 NXDomain 0/1/0 (127)
+00:33:51.531552 IP jarvis.41649 > rpi5-srv.local.domain: 14838+ PTR? 1.29.168.192.in-addr.arpa. (43)
+00:33:51.535563 IP rpi5-srv.local.domain > jarvis.41649: 14838 NXDomain 0/1/0 (127)
+^C
+19 packets captured
+19 packets received by filter
+0 packets dropped by kernel
+sudo tcpdump -i wlo1
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on wlo1, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+23:57:10.047366 IP rpi5-srv.local.3000 > jarvis.46318: Flags [P.], seq 399563200:399570627, ack 2625021336, win 559, options [nop,nop,TS val 930880997 ecr 4151142870], length 7427
+23:57:10.047444 IP jarvis.46318 > rpi5-srv.local.3000: Flags [.], ack 7427, win 12054, options [nop,nop,TS val 4151142875 ecr 930880997], length 0
+23:57:10.063369 IP rpi5-srv.local.3000 > jarvis.46308: Flags [P.], seq 2244535764:2244537657, ack 1541189699, win 555, options [nop,nop,TS val 930881014 ecr 4151142840], length 1893
+23:57:10.063439 IP jarvis.46308 > rpi5-srv.local.3000: Flags [.], ack 1893, win 1144, options [nop,nop,TS val 4151142891 ecr 930881014], length 0
+23:57:10.063370 IP rpi5-srv.local.3000 > jarvis.35658: Flags [P.], seq 3218037928:3218040167, ack 956251781, win 559, options [nop,nop,TS val 930881015 ecr 4151142840], length 2239
+23:57:10.063483 IP jarvis.35658 > rpi5-srv.local.3000: Flags [.], ack 2239, win 11208, options [nop,nop,TS val 4151142891 ecr 930881015], length 0
+23:57:10.069159 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 2838945469:2838949565, ack 2607418362, win 559, options [nop,nop,TS val 930881020 ecr 4151142840], length 4096
+23:57:10.069203 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 4096, win 10398, options [nop,nop,TS val 4151142897 ecr 930881020], length 0
+23:57:10.069159 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 4096:11336, ack 1, win 559, options [nop,nop,TS val 930881020 ecr 4151142840], length 7240
+23:57:10.069247 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 11336, win 10380, options [nop,nop,TS val 4151142897 ecr 930881020], length 0
+23:57:10.069267 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 11336:13220, ack 1, win 559, options [nop,nop,TS val 930881020 ecr 4151142840], length 1884
+23:57:10.069281 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 13220, win 10366, options [nop,nop,TS val 4151142897 ecr 930881020], length 0
+23:57:10.072260 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 13220:21908, ack 1, win 559, options [nop,nop,TS val 930881022 ecr 4151142897], length 8688
+23:57:10.072294 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 21908, win 10371, options [nop,nop,TS val 4151142900 ecr 930881022], length 0
+23:57:10.072260 IP rpi5-srv.local.3000 > jarvis.46316: Flags [.], seq 21908:32768, ack 1, win 559, options [nop,nop,TS val 930881022 ecr 4151142897], length 10860
+23:57:10.072339 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 32768, win 10352, options [nop,nop,TS val 4151142900 ecr 930881022], length 0
+23:57:10.072371 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 32768:34940, ack 1, win 559, options [nop,nop,TS val 930881022 ecr 4151142897], length 2172
+23:57:10.072383 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 34940, win 10408, options [nop,nop,TS val 4151142900 ecr 930881022], length 0
+23:57:10.072371 IP rpi5-srv.local.3000 > jarvis.46316: Flags [.], seq 34940:37836, ack 1, win 559, options [nop,nop,TS val 930881022 ecr 4151142897], length 2896
+23:57:10.072400 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 37836, win 10408, options [nop,nop,TS val 4151142900 ecr 930881022], length 0
+23:57:10.072371 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 37836:42180, ack 1, win 559, options [nop,nop,TS val 930881022 ecr 4151142897], length 4344
+23:57:10.072418 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 42180, win 10398, options [nop,nop,TS val 4151142900 ecr 930881022], length 0
+23:57:10.074207 IP jarvis.43054 > ohio.time.system76.com.ntp: NTPv4, Client, length 228
+23:57:10.074536 IP rpi5-srv.local.3000 > jarvis.52426: Flags [P.], seq 2572027164:2572027364, ack 248551009, win 461, options [nop,nop,TS val 930881025 ecr 4151142840], length 200
+23:57:10.074562 IP jarvis.52426 > rpi5-srv.local.3000: Flags [.], ack 200, win 501, options [nop,nop,TS val 4151142902 ecr 930881025], length 0
+23:57:10.074536 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 42180:58108, ack 1, win 559, options [nop,nop,TS val 930881025 ecr 4151142900], length 15928
+23:57:10.074592 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 58108, win 10324, options [nop,nop,TS val 4151142902 ecr 930881025], length 0
+23:57:10.074611 IP rpi5-srv.local.3000 > jarvis.46316: Flags [.], seq 58108:62452, ack 1, win 559, options [nop,nop,TS val 930881025 ecr 4151142900], length 4344
+23:57:10.074622 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 62452, win 10297, options [nop,nop,TS val 4151142902 ecr 930881025], length 0
+23:57:10.074640 IP rpi5-srv.local.3000 > jarvis.46316: Flags [.], seq 62452:65348, ack 1, win 559, options [nop,nop,TS val 930881025 ecr 4151142900], length 2896
+23:57:10.074650 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 65348, win 10278, options [nop,nop,TS val 4151142902 ecr 930881025], length 0
+23:57:10.075140 IP rpi5-srv.local.3000 > jarvis.46316: Flags [.], seq 65348:65536, ack 1, win 559, options [nop,nop,TS val 930881025 ecr 4151142900], length 188
+23:57:10.075173 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 65536, win 10417, options [nop,nop,TS val 4151142903 ecr 930881025], length 0
+23:57:10.075141 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 65536:71140, ack 1, win 559, options [nop,nop,TS val 930881025 ecr 4151142900], length 5604
+23:57:10.075208 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 71140, win 10389, options [nop,nop,TS val 4151142903 ecr 930881025], length 0
+23:57:10.075141 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 71140:82724, ack 1, win 559, options [nop,nop,TS val 930881025 ecr 4151142900], length 11584
+23:57:10.075236 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 82724, win 10352, options [nop,nop,TS val 4151142903 ecr 930881025], length 0
+23:57:10.078935 IP rpi5-srv.local.3000 > jarvis.46316: Flags [.], seq 82724:98304, ack 1, win 559, options [nop,nop,TS val 930881028 ecr 4151142902], length 15580
+23:57:10.078989 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 98304, win 10324, options [nop,nop,TS val 4151142906 ecr 930881028], length 0
+23:57:10.079095 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 98304:100100, ack 1, win 559, options [nop,nop,TS val 930881028 ecr 4151142902], length 1796
+23:57:10.079110 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 100100, win 10408, options [nop,nop,TS val 4151142907 ecr 930881028], length 0
+23:57:10.079095 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 100100:107340, ack 1, win 559, options [nop,nop,TS val 930881028 ecr 4151142903], length 7240
+23:57:10.079095 IP rpi5-srv.local.3000 > jarvis.46316: Flags [.], seq 107340:123660, ack 1, win 559, options [nop,nop,TS val 930881028 ecr 4151142903], length 16320
+23:57:10.079169 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 123660:124650, ack 1, win 559, options [nop,nop,TS val 930881028 ecr 4151142903], length 990
+23:57:10.079468 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 124650, win 10306, options [nop,nop,TS val 4151142907 ecr 930881028], length 0
+23:57:10.140804 IP jarvis.45026 > rpi5-srv.local.domain: 40035+ PTR? 95.29.168.192.in-addr.arpa. (44)
+23:57:10.143642 IP rpi5-srv.local.domain > jarvis.45026: 40035 NXDomain 0/1/0 (128)
+23:57:10.144736 IP jarvis.43801 > rpi5-srv.local.domain: 55530+ PTR? 152.129.134.3.in-addr.arpa. (44)
+23:57:10.498530 IP ohio.time.system76.com.ntp > jarvis.43054: NTPv4, Server, length 228
+23:57:10.557924 IP jarvis.57156 > rpi5-srv.local.domain: 58978+ PTR? 1.29.168.192.in-addr.arpa. (43)
+23:57:10.561195 IP rpi5-srv.local.domain > jarvis.57156: 58978 NXDomain 0/1/0 (127)
+23:57:10.575572 IP jarvis.58728 > rpi5-srv.local.http: Flags [P.], seq 410379281:410379767, ack 16933970, win 324, options [nop,nop,TS val 4151143403 ecr 2535538422], length 486: HTTP: GET /api/widgets/resources?type=cpu HTTP/1.1
+23:57:10.583018 IP rpi5-srv.local.http > jarvis.58728: Flags [P.], seq 1:264, ack 486, win 280, options [nop,nop,TS val 2535541360 ecr 4151143403], length 263: HTTP: HTTP/1.1 200 OK
+23:57:10.583077 IP jarvis.58728 > rpi5-srv.local.http: Flags [.], ack 264, win 322, options [nop,nop,TS val 4151143410 ecr 2535541360], length 0
+23:57:10.602962 IP rpi5-srv.local.domain > jarvis.43801: 55530 1/0/0 PTR ohio.time.system76.com. (80)
+23:57:10.649762 IP jarvis.58728 > rpi5-srv.local.http: Flags [P.], seq 486:975, ack 264, win 324, options [nop,nop,TS val 4151143477 ecr 2535541360], length 489: HTTP: GET /api/widgets/resources?type=memory HTTP/1.1
+23:57:10.652934 IP rpi5-srv.local.http > jarvis.58728: Flags [P.], seq 264:754, ack 975, win 280, options [nop,nop,TS val 2535541431 ecr 4151143477], length 490: HTTP: HTTP/1.1 200 OK
+23:57:10.652967 IP jarvis.58728 > rpi5-srv.local.http: Flags [.], ack 754, win 321, options [nop,nop,TS val 4151143480 ecr 2535541431], length 0
+23:57:10.663701 IP jarvis.58728 > rpi5-srv.local.http: Flags [P.], seq 975:1471, ack 754, win 324, options [nop,nop,TS val 4151143491 ecr 2535541431], length 496: HTTP: GET /api/widgets/resources?type=disk&target=/ HTTP/1.1
+23:57:10.677884 IP rpi5-srv.local.http > jarvis.58728: Flags [P.], seq 754:1111, ack 1471, win 280, options [nop,nop,TS val 2535541456 ecr 4151143491], length 357: HTTP: HTTP/1.1 200 OK
+23:57:10.718192 IP jarvis.58728 > rpi5-srv.local.http: Flags [.], ack 1111, win 324, options [nop,nop,TS val 4151143546 ecr 2535541456], length 0
+^C
+61 packets captured
+61 packets received by filter
+0 packets dropped by kernel

@@ -1,0 +1,1 @@
+ritvik@jarvis:~/work/Ritvik/Ritvik_Networking_Training$ vncviewer rpi5-srv.local

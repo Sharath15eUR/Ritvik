@@ -1,0 +1,25 @@
+ritvik@jarvis:~/work/Ritvik/Ritvik_Networking_Training$ tree /tmp/d1
+/tmp/d1
+├── d2
+│   ├── d4
+│   │   └── f8
+│   ├── f3
+│   └── f4
+├── d3
+│   ├── f6
+│   └── f7
+├── f1
+├── f2
+└── f5
+
+3 directories, 8 files
+ritvik@jarvis:~/work/Ritvik/Ritvik_Networking_Training$ scp -r /tmp/d1/ ritvik@rpi5-srv.local:/tmp/d1
+ritvik@rpi5-srv.local's password: 
+f8                                                                            100%    0     0.0KB/s   00:00    
+f3                                                                            100%    0     0.0KB/s   00:00    
+f4                                                                            100%    0     0.0KB/s   00:00    
+f7                                                                            100%    0     0.0KB/s   00:00    
+f6                                                                            100%    0     0.0KB/s   00:00    
+f2                                                                            100%    0     0.0KB/s   00:00    
+f1                                                                            100%    0     0.0KB/s   00:00    
+f5                                                                            100%    0     0.0KB/s   00:00    

@@ -1,0 +1,56 @@
+ritvik@jarvis:~/work/Ritvik/Ritvik_Networking_Training$ ftp kvm-srv01.local
+Connected to kvm-srv01.local.
+220 pyftpdlib 1.5.9 ready.
+Name (kvm-srv01.local:ritvik): ubuntu
+331 Username ok, send password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ls
+229 Entering extended passive mode (|||55809|).
+125 Data connection already open. Transfer starting.
+-rw-rw-r--   1 ubuntu   ubuntu         54 Feb 25 18:14 file.txt
+-rw-r--r--   1 root     root            0 Feb 25 18:18 helo.txt
+226 Transfer complete.
+ftp> get file.txt
+local: file.txt remote: file.txt
+229 Entering extended passive mode (|||45167|).
+125 Data connection already open. Transfer starting.
+  0% |                                                                   |     0        0.00 KiB/s    --:-- ET100% |*******************************************************************|    54      211.78 KiB/s    00:00 ETA
+226 Transfer complete.
+54 bytes received in 00:00 (98.38 KiB/s)
+ftp> exit
+221 Goodbye.
+ritvik@jarvis:~/work/Ritvik/Ritvik_Networking_Training$ cat file.txt 
+this is a file on remote machine accessed through ftp
+ritvik@jarvis:~/work/Ritvik/Ritvik_Networking_Training$ echo "new file" > new_file.txt
+ritvik@jarvis:~/work/Ritvik/Ritvik_Networking_Training$ ftp kvm-srv01.local
+Connected to kvm-srv01.local.
+220 pyftpdlib 1.5.9 ready.
+Name (kvm-srv01.local:ritvik): ubuntu
+331 Username ok, send password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> put new_file.txt
+local: new_file.txt remote: new_file.txt
+229 Entering extended passive mode (|||46081|).
+125 Data connection already open. Transfer starting.
+  0% |                                                                   |     0        0.00 KiB/s    --:-- ET100% |*******************************************************************|     9       83.70 KiB/s    00:00 ETA
+226 Transfer complete.
+9 bytes sent in 00:00 (5.83 KiB/s)
+ftp> dir
+229 Entering extended passive mode (|||38659|).
+125 Data connection already open. Transfer starting.
+-rw-rw-r--   1 ubuntu   ubuntu         54 Feb 25 18:14 file.txt
+-rw-r--r--   1 root     root            0 Feb 25 18:18 helo.txt
+-rw-r--r--   1 root     root            9 Feb 25 18:20 new_file.txt
+226 Transfer complete.
+ftp> exit
+221 Goodbye.
+ritvik@jarvis:~/work/Ritvik/Ritvik_Networking_Training$ sftp primary.local
+(ubuntu@primary.local) Password: 
+Connected to primary.local.
+sftp> exit

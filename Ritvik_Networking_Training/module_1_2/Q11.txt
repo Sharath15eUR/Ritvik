@@ -1,0 +1,62 @@
+ritvik@jarvis:~/work/Ritvik/Ritvik_Networking_Training$ ssh ritvik@rpi5-srv.local
+ritvik@rpi5-srv.local's password: 
+Linux rpi5-srv 6.6.51+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.6.51-1+rpt3 (2024-10-08) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue Feb 25 18:52:20 2025 from 192.168.29.95
+ritvik@rpi5-srv:~ $ whoami
+ritvik
+ritvik@rpi5-srv:~ $ exit
+logout
+Connection to rpi5-srv.local closed.
+ritvik@jarvis:~/work/Ritvik/Ritvik_Networking_Training$ telnet primary.local
+Trying 10.123.25.195...
+Connected to primary.local.
+Escape character is '^]'.
+
+Linux 6.8.0-52-generic (primary) (pts/0)
+
+primary login: ubuntu
+Password: 
+Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 6.8.0-52-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Wed Feb 26 00:25:57 IST 2025
+
+  System load:  0.05              Processes:             111
+  Usage of /:   94.4% of 3.80GB   Users logged in:       0
+  Memory usage: 6%                IPv4 address for ens3: 10.123.25.195
+  Swap usage:   0%
+
+  => / is using 94.4% of 3.80GB
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+84 updates can be applied immediately.
+15 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+
+ubuntu@primary:~$ whoami
+ubuntu
+ubuntu@primary:~$ exit
+logout
+Connection closed by foreign host.

@@ -1,0 +1,403 @@
+Script started on 2025-02-25 23:28:43+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="112" LINES="30"]
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ exitscp /tmp/d1/ ritvik@rpi5-srv.local:/tmp/d1tree /tmp/d1[K
+[?2004l[01;34m/tmp/d1[0m
+├── [01;34md2[0m
+│   ├── [01;34md4[0m
+│   │   └── f8
+│   ├── f3
+│   └── f4
+├── [01;34md3[0m
+│   ├── f6
+│   └── f7
+├── f1
+├── f2
+└── f5
+
+3 directories, 8 files
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ tree /tmp/d1[8Pexitscp /tmp/d1/ ritvik@rpi5-srv.local:/tmp/d1[1@-[1@r[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lritvik@rpi5-srv.local's password: 
+f8                                                                            100%    0     0.0KB/s   00:00    
+f3                                                                            100%    0     0.0KB/s   00:00    
+f4                                                                            100%    0     0.0KB/s   00:00    
+f7                                                                            100%    0     0.0KB/s   00:00    
+f6                                                                            100%    0     0.0KB/s   00:00    
+f2                                                                            100%    0     0.0KB/s   00:00    
+f1                                                                            100%    0     0.0KB/s   00:00    
+f5                                                                            100%    0     0.0KB/s   00:00    
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ ftp kvm-srv01.local
+[?2004lConnected to kvm-srv01.local.
+220 pyftpdlib 1.5.9 ready.
+Name (kvm-srv01.local:ritvik): ubuntu
+331 Username ok, send password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ls
+229 Entering extended passive mode (|||55809|).
+125 Data connection already open. Transfer starting.
+-rw-rw-r--   1 ubuntu   ubuntu         54 Feb 25 18:14 file.txt
+-rw-r--r--   1 root     root            0 Feb 25 18:18 helo.txt
+226 Transfer complete.
+ftp> get file[14G.txt
+local: file.txt remote: file.txt
+229 Entering extended passive mode (|||45167|).
+125 Data connection already open. Transfer starting.
+  0% |                                                                   |     0        0.00 KiB/s    --:-- ETA100% |*******************************************************************|    54      211.78 KiB/s    00:00 ETA
+226 Transfer complete.
+54 bytes received in 00:00 (98.38 KiB/s)
+ftp> exit
+221 Goodbye.
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ cat file.txt 
+[?2004lthis is a file on remote machine accessed through ftp
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ echo "m[Knew file' >[K[K[K" > file[K[K[K[Kf[Knew_file.txt
+[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ echo "new file" > new_file.txt[17Pcat file.txt ftp kvm-srv01.local
+[?2004lConnected to kvm-srv01.local.
+220 pyftpdlib 1.5.9 ready.
+Name (kvm-srv01.local:ritvik): ubuntu
+331 Username ok, send password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> put new_file.txt
+local: new_file.txt remote: new_file.txt
+229 Entering extended passive mode (|||46081|).
+125 Data connection already open. Transfer starting.
+  0% |                                                                   |     0        0.00 KiB/s    --:-- ETA100% |*******************************************************************|     9       83.70 KiB/s    00:00 ETA
+226 Transfer complete.
+9 bytes sent in 00:00 (5.83 KiB/s)
+ftp> dir
+229 Entering extended passive mode (|||38659|).
+125 Data connection already open. Transfer starting.
+-rw-rw-r--   1 ubuntu   ubuntu         54 Feb 25 18:14 file.txt
+-rw-r--r--   1 root     root            0 Feb 25 18:18 helo.txt
+-rw-r--r--   1 root     root            9 Feb 25 18:20 new_file.txt
+226 Transfer complete.
+ftp> exit
+221 Goodbye.
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ sudo tcpdump - [Ki wlo1
+[?2004l[sudo] password for ritvik: 
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on wlo1, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+23:57:10.047366 IP rpi5-srv.local.3000 > jarvis.46318: Flags [P.], seq 399563200:399570627, ack 2625021336, win 559, options [nop,nop,TS val 930880997 ecr 4151142870], length 7427
+23:57:10.047444 IP jarvis.46318 > rpi5-srv.local.3000: Flags [.], ack 7427, win 12054, options [nop,nop,TS val 4151142875 ecr 930880997], length 0
+23:57:10.063369 IP rpi5-srv.local.3000 > jarvis.46308: Flags [P.], seq 2244535764:2244537657, ack 1541189699, win 555, options [nop,nop,TS val 930881014 ecr 4151142840], length 1893
+23:57:10.063439 IP jarvis.46308 > rpi5-srv.local.3000: Flags [.], ack 1893, win 1144, options [nop,nop,TS val 4151142891 ecr 930881014], length 0
+23:57:10.063370 IP rpi5-srv.local.3000 > jarvis.35658: Flags [P.], seq 3218037928:3218040167, ack 956251781, win 559, options [nop,nop,TS val 930881015 ecr 4151142840], length 2239
+23:57:10.063483 IP jarvis.35658 > rpi5-srv.local.3000: Flags [.], ack 2239, win 11208, options [nop,nop,TS val 4151142891 ecr 930881015], length 0
+23:57:10.069159 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 2838945469:2838949565, ack 2607418362, win 559, options [nop,nop,TS val 930881020 ecr 4151142840], length 4096
+23:57:10.069203 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 4096, win 10398, options [nop,nop,TS val 4151142897 ecr 930881020], length 0
+23:57:10.069159 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 4096:11336, ack 1, win 559, options [nop,nop,TS val 930881020 ecr 4151142840], length 7240
+23:57:10.069247 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 11336, win 10380, options [nop,nop,TS val 4151142897 ecr 930881020], length 0
+23:57:10.069267 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 11336:13220, ack 1, win 559, options [nop,nop,TS val 930881020 ecr 4151142840], length 1884
+23:57:10.069281 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 13220, win 10366, options [nop,nop,TS val 4151142897 ecr 930881020], length 0
+23:57:10.072260 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 13220:21908, ack 1, win 559, options [nop,nop,TS val 930881022 ecr 4151142897], length 8688
+23:57:10.072294 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 21908, win 10371, options [nop,nop,TS val 4151142900 ecr 930881022], length 0
+23:57:10.072260 IP rpi5-srv.local.3000 > jarvis.46316: Flags [.], seq 21908:32768, ack 1, win 559, options [nop,nop,TS val 930881022 ecr 4151142897], length 10860
+23:57:10.072339 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 32768, win 10352, options [nop,nop,TS val 4151142900 ecr 930881022], length 0
+23:57:10.072371 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 32768:34940, ack 1, win 559, options [nop,nop,TS val 930881022 ecr 4151142897], length 2172
+23:57:10.072383 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 34940, win 10408, options [nop,nop,TS val 4151142900 ecr 930881022], length 0
+23:57:10.072371 IP rpi5-srv.local.3000 > jarvis.46316: Flags [.], seq 34940:37836, ack 1, win 559, options [nop,nop,TS val 930881022 ecr 4151142897], length 2896
+23:57:10.072400 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 37836, win 10408, options [nop,nop,TS val 4151142900 ecr 930881022], length 0
+23:57:10.072371 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 37836:42180, ack 1, win 559, options [nop,nop,TS val 930881022 ecr 4151142897], length 4344
+23:57:10.072418 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 42180, win 10398, options [nop,nop,TS val 4151142900 ecr 930881022], length 0
+23:57:10.074207 IP jarvis.43054 > ohio.time.system76.com.ntp: NTPv4, Client, length 228
+23:57:10.074536 IP rpi5-srv.local.3000 > jarvis.52426: Flags [P.], seq 2572027164:2572027364, ack 248551009, win 461, options [nop,nop,TS val 930881025 ecr 4151142840], length 200
+23:57:10.074562 IP jarvis.52426 > rpi5-srv.local.3000: Flags [.], ack 200, win 501, options [nop,nop,TS val 4151142902 ecr 930881025], length 0
+23:57:10.074536 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 42180:58108, ack 1, win 559, options [nop,nop,TS val 930881025 ecr 4151142900], length 15928
+23:57:10.074592 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 58108, win 10324, options [nop,nop,TS val 4151142902 ecr 930881025], length 0
+23:57:10.074611 IP rpi5-srv.local.3000 > jarvis.46316: Flags [.], seq 58108:62452, ack 1, win 559, options [nop,nop,TS val 930881025 ecr 4151142900], length 4344
+23:57:10.074622 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 62452, win 10297, options [nop,nop,TS val 4151142902 ecr 930881025], length 0
+23:57:10.074640 IP rpi5-srv.local.3000 > jarvis.46316: Flags [.], seq 62452:65348, ack 1, win 559, options [nop,nop,TS val 930881025 ecr 4151142900], length 2896
+23:57:10.074650 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 65348, win 10278, options [nop,nop,TS val 4151142902 ecr 930881025], length 0
+23:57:10.075140 IP rpi5-srv.local.3000 > jarvis.46316: Flags [.], seq 65348:65536, ack 1, win 559, options [nop,nop,TS val 930881025 ecr 4151142900], length 188
+23:57:10.075173 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 65536, win 10417, options [nop,nop,TS val 4151142903 ecr 930881025], length 0
+23:57:10.075141 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 65536:71140, ack 1, win 559, options [nop,nop,TS val 930881025 ecr 4151142900], length 5604
+23:57:10.075208 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 71140, win 10389, options [nop,nop,TS val 4151142903 ecr 930881025], length 0
+23:57:10.075141 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 71140:82724, ack 1, win 559, options [nop,nop,TS val 930881025 ecr 4151142900], length 11584
+23:57:10.075236 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 82724, win 10352, options [nop,nop,TS val 4151142903 ecr 930881025], length 0
+23:57:10.078935 IP rpi5-srv.local.3000 > jarvis.46316: Flags [.], seq 82724:98304, ack 1, win 559, options [nop,nop,TS val 930881028 ecr 4151142902], length 15580
+23:57:10.078989 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 98304, win 10324, options [nop,nop,TS val 4151142906 ecr 930881028], length 0
+23:57:10.079095 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 98304:100100, ack 1, win 559, options [nop,nop,TS val 930881028 ecr 4151142902], length 1796
+23:57:10.079110 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 100100, win 10408, options [nop,nop,TS val 4151142907 ecr 930881028], length 0
+23:57:10.079095 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 100100:107340, ack 1, win 559, options [nop,nop,TS val 930881028 ecr 4151142903], length 7240
+23:57:10.079095 IP rpi5-srv.local.3000 > jarvis.46316: Flags [.], seq 107340:123660, ack 1, win 559, options [nop,nop,TS val 930881028 ecr 4151142903], length 16320
+23:57:10.079169 IP rpi5-srv.local.3000 > jarvis.46316: Flags [P.], seq 123660:124650, ack 1, win 559, options [nop,nop,TS val 930881028 ecr 4151142903], length 990
+23:57:10.079468 IP jarvis.46316 > rpi5-srv.local.3000: Flags [.], ack 124650, win 10306, options [nop,nop,TS val 4151142907 ecr 930881028], length 0
+23:57:10.140804 IP jarvis.45026 > rpi5-srv.local.domain: 40035+ PTR? 95.29.168.192.in-addr.arpa. (44)
+23:57:10.143642 IP rpi5-srv.local.domain > jarvis.45026: 40035 NXDomain 0/1/0 (128)
+23:57:10.144736 IP jarvis.43801 > rpi5-srv.local.domain: 55530+ PTR? 152.129.134.3.in-addr.arpa. (44)
+23:57:10.498530 IP ohio.time.system76.com.ntp > jarvis.43054: NTPv4, Server, length 228
+23:57:10.557924 IP jarvis.57156 > rpi5-srv.local.domain: 58978+ PTR? 1.29.168.192.in-addr.arpa. (43)
+23:57:10.561195 IP rpi5-srv.local.domain > jarvis.57156: 58978 NXDomain 0/1/0 (127)
+23:57:10.575572 IP jarvis.58728 > rpi5-srv.local.http: Flags [P.], seq 410379281:410379767, ack 16933970, win 324, options [nop,nop,TS val 4151143403 ecr 2535538422], length 486: HTTP: GET /api/widgets/resources?type=cpu HTTP/1.1
+23:57:10.583018 IP rpi5-srv.local.http > jarvis.58728: Flags [P.], seq 1:264, ack 486, win 280, options [nop,nop,TS val 2535541360 ecr 4151143403], length 263: HTTP: HTTP/1.1 200 OK
+23:57:10.583077 IP jarvis.58728 > rpi5-srv.local.http: Flags [.], ack 264, win 322, options [nop,nop,TS val 4151143410 ecr 2535541360], length 0
+23:57:10.602962 IP rpi5-srv.local.domain > jarvis.43801: 55530 1/0/0 PTR ohio.time.system76.com. (80)
+23:57:10.649762 IP jarvis.58728 > rpi5-srv.local.http: Flags [P.], seq 486:975, ack 264, win 324, options [nop,nop,TS val 4151143477 ecr 2535541360], length 489: HTTP: GET /api/widgets/resources?type=memory HTTP/1.1
+23:57:10.652934 IP rpi5-srv.local.http > jarvis.58728: Flags [P.], seq 264:754, ack 975, win 280, options [nop,nop,TS val 2535541431 ecr 4151143477], length 490: HTTP: HTTP/1.1 200 OK
+23:57:10.652967 IP jarvis.58728 > rpi5-srv.local.http: Flags [.], ack 754, win 321, options [nop,nop,TS val 4151143480 ecr 2535541431], length 0
+23:57:10.663701 IP jarvis.58728 > rpi5-srv.local.http: Flags [P.], seq 975:1471, ack 754, win 324, options [nop,nop,TS val 4151143491 ecr 2535541431], length 496: HTTP: GET /api/widgets/resources?type=disk&target=/ HTTP/1.1
+23:57:10.677884 IP rpi5-srv.local.http > jarvis.58728: Flags [P.], seq 754:1111, ack 1471, win 280, options [nop,nop,TS val 2535541456 ecr 4151143491], length 357: HTTP: HTTP/1.1 200 OK
+23:57:10.718192 IP jarvis.58728 > rpi5-srv.local.http: Flags [.], ack 1111, win 324, options [nop,nop,TS val 4151143546 ecr 2535541456], length 0
+^C
+61 packets captured
+61 packets received by filter
+0 packets dropped by kernel
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ [K]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ [K]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ [K]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ [K]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ [K]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ [K]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ [K]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ [K]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ [K]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ [K]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ [K]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ [K]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ [K]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ [K]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ [K]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ [K]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ [K]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ arp -v
+[?2004lAddress                  HWtype  HWaddress           Flags Mask            Iface
+10.123.25.60             ether   52:54:00:e9:4f:0d   C                     mpqemubr0
+10.123.25.195            ether   52:54:00:08:c8:63   C                     mpqemubr0
+_gateway                 ether   c4:e5:32:a3:4d:b5   C                     wlo1
+192.168.29.24            ether   e4:24:6c:78:a1:2c   C                     wlo1
+rpi5-srv.local           ether   d8:3a:dd:f7:c9:12   C                     wlo1
+Entries: 5	Skipped: 0	Found: 5
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ arp -vn
+[?2004lAddress                  HWtype  HWaddress           Flags Mask            Iface
+10.123.25.60             ether   52:54:00:e9:4f:0d   C                     mpqemubr0
+10.123.25.195            ether   52:54:00:08:c8:63   C                     mpqemubr0
+192.168.29.1             ether   c4:e5:32:a3:4d:b5   C                     wlo1
+192.168.29.24            ether   e4:24:6c:78:a1:2c   C                     wlo1
+192.168.29.254           ether   d8:3a:dd:f7:c9:12   C                     wlo1
+Entries: 5	Skipped: 0	Found: 5
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ pin [Kg rpi[K[K[Kkvm-ser[Kv[K[Krv01.local
+[?2004lPING kvm-srv01.local (10.123.25.60) 56(84) bytes of data.
+64 bytes from 10.123.25.60 (10.123.25.60): icmp_seq=1 ttl=64 time=0.655 ms
+64 bytes from 10.123.25.60 (10.123.25.60): icmp_seq=2 ttl=64 time=0.354 ms
+64 bytes from 10.123.25.60 (10.123.25.60): icmp_seq=3 ttl=64 time=0.435 ms
+64 bytes from 10.123.25.60 (10.123.25.60): icmp_seq=4 ttl=64 time=0.714 ms
+^C
+--- kvm-srv01.local ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3008ms
+rtt min/avg/max/mdev = 0.354/0.539/0.714/0.149 ms
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ ping rpi5-srv.local -c 3
+[?2004lPING rpi5-srv.local (192.168.29.254) 56(84) bytes of data.
+64 bytes from rpi5-srv.local (192.168.29.254): icmp_seq=1 ttl=64 time=2.61 ms
+64 bytes from rpi5-srv.local (192.168.29.254): icmp_seq=2 ttl=64 time=3.27 ms
+64 bytes from rpi5-srv.local (192.168.29.254): icmp_seq=3 ttl=64 time=3.72 ms
+
+--- rpi5-srv.local ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2004ms
+rtt min/avg/max/mdev = 2.609/3.197/3.715/0.454 ms
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ vncviewer rpi5-srv.local
+[?2004l[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ rot[Kute -n
+[?2004lKernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         192.168.29.1    0.0.0.0         UG    600    0        0 wlo1
+10.123.25.0     0.0.0.0         255.255.255.0   U     0      0        0 mpqemubr0
+169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 virbr0
+172.17.0.0      0.0.0.0         255.255.0.0     U     0      0        0 docker0
+172.18.0.0      0.0.0.0         255.255.0.0     U     0      0        0 br-54075596b370
+172.19.0.0      0.0.0.0         255.255.0.0     U     0      0        0 br-ed392bbf577a
+172.20.0.0      0.0.0.0         255.255.0.0     U     0      0        0 br-3ecb722967d9
+192.168.29.0    0.0.0.0         255.255.255.0   U     600    0        0 wlo1
+192.168.122.0   0.0.0.0         255.255.255.0   U     0      0        0 virbr0
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ ping _gateway -c 3
+[?2004lPING _gateway(_gateway (fe80::c6e5:32ff:fea3:4db5%wlo1)) 56 data bytes
+64 bytes from _gateway (fe80::c6e5:32ff:fea3:4db5%wlo1): icmp_seq=1 ttl=64 time=3.55 ms
+64 bytes from _gateway (fe80::c6e5:32ff:fea3:4db5%wlo1): icmp_seq=2 ttl=64 time=3.35 ms
+64 bytes from _gateway (fe80::c6e5:32ff:fea3:4db5%wlo1): icmp_seq=3 ttl=64 time=3.17 ms
+
+--- _gateway ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 3.167/3.354/3.550/0.156 ms
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ ping _gateway -c 3^C[?2004l[?2004h[?2004l
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ ssh r[K[K[K[K[Kping _gateway -c 3[1P[1P[1P[1P[1P[1P[1P[1P[1@1[1@9[1@2[1@.[1@6[1@8[1P[1P[1@1[1@6[1@8[1@.[1@9[1P[1@2[1@9[1@.[1@1
+[?2004lPING 192.168.29.1 (192.168.29.1) 56(84) bytes of data.
+64 bytes from 192.168.29.1: icmp_seq=1 ttl=64 time=8.66 ms
+64 bytes from 192.168.29.1: icmp_seq=2 ttl=64 time=5.16 ms
+64 bytes from 192.168.29.1: icmp_seq=3 ttl=64 time=4.17 ms
+
+--- 192.168.29.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 4.171/5.997/8.663/1.927 ms
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ ifconfig
+[?2004lbr-3ecb722967d9: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.20.0.1  netmask 255.255.0.0  broadcast 172.20.255.255
+        ether 02:42:37:98:e8:9b  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+br-54075596b370: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255
+        ether 02:42:44:15:e2:18  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+br-ed392bbf577a: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.19.0.1  netmask 255.255.0.0  broadcast 172.19.255.255
+        ether 02:42:b0:fb:f8:fe  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:92:c7:fe:90  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eno1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether f8:b4:6a:15:c7:da  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 4186  bytes 267934 (267.9 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4186  bytes 267934 (267.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+mpqemubr0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.123.25.1  netmask 255.255.255.0  broadcast 10.123.25.255
+        inet6 fe80::5054:ff:fe65:f0e0  prefixlen 64  scopeid 0x20<link>
+        ether 52:54:00:65:f0:e0  txqueuelen 1000  (Ethernet)
+        RX packets 41547  bytes 3109106 (3.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 80824  bytes 150715221 (150.7 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+tap-1e376645a40: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet6 fe80::1483:55ff:fe0a:ac5  prefixlen 64  scopeid 0x20<link>
+        ether 16:83:55:0a:0a:c5  txqueuelen 1000  (Ethernet)
+        RX packets 27185  bytes 2381918 (2.3 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 53924  bytes 102053753 (102.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+tap-88534888a5b: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::a04b:6ff:fe01:1af0  prefixlen 64  scopeid 0x20<link>
+        ether a2:4b:06:01:1a:f0  txqueuelen 1000  (Ethernet)
+        RX packets 14363  bytes 1308912 (1.3 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 27014  bytes 48674864 (48.6 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+virbr0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 192.168.122.1  netmask 255.255.255.0  broadcast 192.168.122.255
+        ether 52:54:00:47:64:01  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.29.95  netmask 255.255.255.0  broadcast 192.168.29.255
+        inet6 2405:201:e044:b0ba:af8a:62c:9548:b224  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::c9e6:cbfb:60ac:43a  prefixlen 64  scopeid 0x20<link>
+        inet6 2405:201:e044:b0ba:4973:4ac0:b505:906a  prefixlen 64  scopeid 0x0<global>
+        ether d4:d2:52:a8:72:3a  txqueuelen 1000  (Ethernet)
+        RX packets 170956  bytes 235938807 (235.9 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 72307  bytes 10433241 (10.4 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ iwconfig
+[?2004llo        no wireless extensions.
+
+eno1      no wireless extensions.
+
+wlo1      IEEE 802.11  ESSID:"sridhareka5g"  
+          Mode:Managed  Frequency:5.22 GHz  Access Point: 7A:E5:32:A3:4D:BD   
+          Tx-Power=22 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:on
+          Link Quality=61/70  Signal level=-49 dBm  
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:0  Invalid misc:107   Missed beacon:0
+
+virbr0    no wireless extensions.
+
+mpqemubr0  no wireless extensions.
+
+tap-1e376645a40  no wireless extensions.
+
+br-3ecb722967d9  no wireless extensions.
+
+br-54075596b370  no wireless extensions.
+
+docker0   no wireless extensions.
+
+br-ed392bbf577a  no wireless extensions.
+
+tap-88534888a5b  no wireless extensions.
+
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ ssh ritvik@rpi5-srv.local
+[?2004lritvik@rpi5-srv.local's password: 
+Linux rpi5-srv 6.6.51+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.6.51-1+rpt3 (2024-10-08) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Tue Feb 25 18:52:20 2025 from 192.168.29.95
+[?2004h]0;ritvik@rpi5-srv: ~[01;32mritvik@rpi5-srv[00m:[01;34m~ $[00m whoami
+[?2004lritvik
+[?2004h]0;ritvik@rpi5-srv: ~[01;32mritvik@rpi5-srv[00m:[01;34m~ $[00m exit
+[?2004llogout
+Connection to rpi5-srv.local closed.
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ telnet primary.local
+[?2004lTrying 10.123.25.195...
+Connected to primary.local.
+Escape character is '^]'.
+  
+Linux 6.8.0-52-generic (primary) (pts/0)
+
+primary login: ubuntu
+Password: 
+Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 6.8.0-52-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Wed Feb 26 00:25:57 IST 2025
+
+  System load:  0.05              Processes:             111
+  Usage of /:   94.4% of 3.80GB   Users logged in:       0
+  Memory usage: 6%                IPv4 address for ens3: 10.123.25.195
+  Swap usage:   0%
+
+  => / is using 94.4% of 3.80GB
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+84 updates can be applied immediately.
+15 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+
+[?2004h]0;ubuntu@primary: ~[01;32mubuntu@primary[00m:[01;34m~[00m$ whoami
+[?2004lubuntu
+[?2004h]0;ubuntu@primary: ~[01;32mubuntu@primary[00m:[01;34m~[00m$ exit
+[?2004llogout
+Connection closed by foreign host.
+[?2004h]0;ritvik@jarvis: ~/work/Ritvik/Ritvik_Networking_Training[01;32mritvik@jarvis[00m:[01;34m~/work/Ritvik/Ritvik_Networking_Training[00m$ exit
+[?2004lexit
+
+Script done on 2025-02-26 00:26:39+05:30 [COMMAND_EXIT_CODE="1"]

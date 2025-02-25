@@ -1,0 +1,27 @@
+ritvik@jarvis:~/work/Ritvik/Ritvik_Networking_Training$ arp -vn
+Address                  HWtype  HWaddress           Flags Mask            Iface
+10.123.25.60             ether   52:54:00:e9:4f:0d   C                     mpqemubr0
+10.123.25.195            ether   52:54:00:08:c8:63   C                     mpqemubr0
+192.168.29.1             ether   c4:e5:32:a3:4d:b5   C                     wlo1
+192.168.29.24            ether   e4:24:6c:78:a1:2c   C                     wlo1
+192.168.29.254           ether   d8:3a:dd:f7:c9:12   C                     wlo1
+Entries: 5	Skipped: 0	Found: 5
+ritvik@jarvis:~/work/Ritvik/Ritvik_Networking_Training$ ping kvm-srv01.local
+PING kvm-srv01.local (10.123.25.60) 56(84) bytes of data.
+64 bytes from 10.123.25.60 (10.123.25.60): icmp_seq=1 ttl=64 time=0.655 ms
+64 bytes from 10.123.25.60 (10.123.25.60): icmp_seq=2 ttl=64 time=0.354 ms
+64 bytes from 10.123.25.60 (10.123.25.60): icmp_seq=3 ttl=64 time=0.435 ms
+64 bytes from 10.123.25.60 (10.123.25.60): icmp_seq=4 ttl=64 time=0.714 ms
+^C
+--- kvm-srv01.local ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3008ms
+rtt min/avg/max/mdev = 0.354/0.539/0.714/0.149 ms
+ritvik@jarvis:~/work/Ritvik/Ritvik_Networking_Training$ ping rpi5-srv.local -c 3
+PING rpi5-srv.local (192.168.29.254) 56(84) bytes of data.
+64 bytes from rpi5-srv.local (192.168.29.254): icmp_seq=1 ttl=64 time=2.61 ms
+64 bytes from rpi5-srv.local (192.168.29.254): icmp_seq=2 ttl=64 time=3.27 ms
+64 bytes from rpi5-srv.local (192.168.29.254): icmp_seq=3 ttl=64 time=3.72 ms
+
+--- rpi5-srv.local ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2004ms
+rtt min/avg/max/mdev = 2.609/3.197/3.715/0.454 ms

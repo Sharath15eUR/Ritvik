@@ -1,0 +1,123 @@
+ritvik@jarvis:~/work/Ritvik/Ritvik_Networking_Training$ ifconfig
+br-3ecb722967d9: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.20.0.1  netmask 255.255.0.0  broadcast 172.20.255.255
+        ether 02:42:37:98:e8:9b  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+br-54075596b370: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255
+        ether 02:42:44:15:e2:18  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+br-ed392bbf577a: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.19.0.1  netmask 255.255.0.0  broadcast 172.19.255.255
+        ether 02:42:b0:fb:f8:fe  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:92:c7:fe:90  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eno1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether f8:b4:6a:15:c7:da  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 4186  bytes 267934 (267.9 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4186  bytes 267934 (267.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+mpqemubr0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.123.25.1  netmask 255.255.255.0  broadcast 10.123.25.255
+        inet6 fe80::5054:ff:fe65:f0e0  prefixlen 64  scopeid 0x20<link>
+        ether 52:54:00:65:f0:e0  txqueuelen 1000  (Ethernet)
+        RX packets 41547  bytes 3109106 (3.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 80824  bytes 150715221 (150.7 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+tap-1e376645a40: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet6 fe80::1483:55ff:fe0a:ac5  prefixlen 64  scopeid 0x20<link>
+        ether 16:83:55:0a:0a:c5  txqueuelen 1000  (Ethernet)
+        RX packets 27185  bytes 2381918 (2.3 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 53924  bytes 102053753 (102.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+tap-88534888a5b: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::a04b:6ff:fe01:1af0  prefixlen 64  scopeid 0x20<link>
+        ether a2:4b:06:01:1a:f0  txqueuelen 1000  (Ethernet)
+        RX packets 14363  bytes 1308912 (1.3 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 27014  bytes 48674864 (48.6 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+virbr0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 192.168.122.1  netmask 255.255.255.0  broadcast 192.168.122.255
+        ether 52:54:00:47:64:01  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.29.95  netmask 255.255.255.0  broadcast 192.168.29.255
+        inet6 2405:201:e044:b0ba:af8a:62c:9548:b224  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::c9e6:cbfb:60ac:43a  prefixlen 64  scopeid 0x20<link>
+        inet6 2405:201:e044:b0ba:4973:4ac0:b505:906a  prefixlen 64  scopeid 0x0<global>
+        ether d4:d2:52:a8:72:3a  txqueuelen 1000  (Ethernet)
+        RX packets 170956  bytes 235938807 (235.9 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 72307  bytes 10433241 (10.4 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ritvik@jarvis:~/work/Ritvik/Ritvik_Networking_Training$ iwconfig
+lo        no wireless extensions.
+
+eno1      no wireless extensions.
+
+wlo1      IEEE 802.11  ESSID:"sridhareka5g"  
+          Mode:Managed  Frequency:5.22 GHz  Access Point: 7A:E5:32:A3:4D:BD   
+          Tx-Power=22 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:on
+          Link Quality=61/70  Signal level=-49 dBm  
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:0  Invalid misc:107   Missed beacon:0
+
+virbr0    no wireless extensions.
+
+mpqemubr0  no wireless extensions.
+
+tap-1e376645a40  no wireless extensions.
+
+br-3ecb722967d9  no wireless extensions.
+
+br-54075596b370  no wireless extensions.
+
+docker0   no wireless extensions.
+
+br-ed392bbf577a  no wireless extensions.
+
+tap-88534888a5b  no wireless extensions.
+
