@@ -1,4 +1,4 @@
-## Networking Training - Module 3 & 4
+## Networking Training - Module 5
 
 ### Q1 : Capture and analyze ARP packets using wireshark. Inspect the ARP request and reply frames and discuss the role of sender's IP and MAC address in these packets.
 
