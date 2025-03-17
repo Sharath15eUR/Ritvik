@@ -26,7 +26,7 @@ response
 ![](./images/dns_response.png)
 
 TCP traffic  
-![](./images/tcp_packet.png
+![](./images/tcp_packet.png)
 
 ### Q3 : Explore traceroute/tracert for different websites eg:google.com and analyse the parameters in the output and explore different options for traceroute command.
 
@@ -359,12 +359,158 @@ now we can see that the devices in vlan10 and vlan20 can communicate with each o
 
 ### Q10 : Implement ACLs to restrict traffic based on source and destination ports. Test rules by simulating legitimate and unauthorized traffic.
 
+The following commands were used to configure the router
+
+```
+enable 
+configure terminal
+ip access-list extended acl1
+permit tcp 192.168.1.0 0.0.0.255 192.168.1.0 0.0.0.255 eq 80
+deny tcp any any
+deny udp any any
+exit
+interface gigabitEthernet 0/0/0
+ip access-group acl1 in
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+```
+
+We can see that all traffic except tcp in port 80 has been denied.
+
+This can be verified by viewing the webpage on the server and by sending icmp packets on the network
+
+![](./images/extende_acl_1.png)
+![](./images/extende_acl_2.png)
+
 ### Q11 :  Configure a standard Access Control List (ACL) on a router to permit traffic from a specific IP range. Test connectivity to verify the ACL is working as intended.
+
+Let us consider a network where we only want traffic from the ip range   `192.168.1.1 to 192.168.1.10`
+
+The first ip is 1 , in bits `00000001` and the last is 10, in bits `00001010`
+
+This implies that the last 4 bits of the octet can vary, therefore the wildcard subnet mask must have `00001111` in the last octet. The wildcard mask is `0.0.0.15`
+
+
+The following commands were used to configure the ACL on the router
+
+```
+enable 
+configure terminal
+ip access-list standard acl1
+permit 192.168.1.0 0.0.0.15
+deny any
+exit
+interface gigabitEthernet 0/0/0
+ip access-group acl1 in
+ip access-group acl1 out
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+```
+
+![](./images/standard_acl_1.png)
+
+we can see that the device with IP `192.168.1.10` can ping the router while the device with IP `192.168.1.20` cannot.
+
 
 ### Q12 : Create an extended ACL to block specific applications, such as HTTP or FTP traffic. Test the ACL rules by attempting to access blocked services.
 
+The following commands were used to configure the router
+
+```
+enable 
+configure terminal
+ip access-list standard 100
+deny tcp any any eq 80
+permit ip any any
+exit
+interface gigabitEthernet 0/0/0
+ip access-group 100 in
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+```
+
+Trying to view the webpage on the server, we can see that http is denied (port 80)
+
+![](./images/http_block_acl_1.png)
+
+But if we try to ping the server, we can do so
+
+![](./images/http_block_acl_2.png)
+
 ### Q13 : Try Static NAT, Dynamic NAT and PAT to translate IPs.
+
+![](./images/nat.png)
+
+#### Static NAT
+
+The following commands were used to configure static nat on the router
+
+```
+enable 
+configure terminal
+interface gigabitEthernet 0/0/0
+ip nat inside
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+exit
+interface gigabitEthernet 0/0/1
+ip nat outsude
+ip address 203.0.113.1 255.255.255.0
+no shutdown
+exit
+ip nat inside source static 192.168.1.10 203.0.113.10
+```
+
+#### Dynamic NAT
+
+The following commands were used to configure dynamic NAT
+
+```
+enable 
+configure terminal
+interface gigabitEthernet 0/0/0
+ip nat inside
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+exit
+interface gigabitEthernet 0/0/1
+ip nat outsude
+ip address 203.0.113.1 255.255.255.0
+no shutdown
+exit
+ip nat pool pub_pool 203.0.113.2 203.0.113.9 netmask 255.255.255.0
+access-list 1 permit 192.168.1.0 0.0.0.255
+ip nat inside source list 1 pool pub_pool
+```
+
+#### PAT
+
+The following commands were used to configure PAT
+
+```
+enable 
+configure terminal
+interface gigabitEthernet 0/0/0
+ip nat inside
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+exit
+interface gigabitEthernet 0/0/1
+ip nat outsude
+ip address 203.0.113.1 255.255.255.0
+no shutdown
+exit
+access-list 1 permit 192.168.1.0 0.0.0.255
+ip nat inside source list 1 interface GigabitEthernet 0/1 overload
+exit
+```
 
 ### Q14 : Download iperf in laptop/phone and make sure they are in same network. Try different iperf commands with tcp, udp, birectional, reverse, multicast, parallel options and analyze the bandwidth and rate of transmission, delay, jitter etc.
 
+Ipef using TCP
 
+![](./images/iperf.png)
+
+Iperf using UDP
+
+![](./images/iperf_udp.png)
