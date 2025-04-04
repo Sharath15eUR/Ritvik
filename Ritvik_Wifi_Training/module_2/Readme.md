@@ -25,18 +25,38 @@ The two tunnels in CAPWAP are:
 
 ### Q4 : Whats the difference between Lightweight APs and Cloud-based APs
 
-
+| **Lightweight APs** | **Cloud Based APs** |
+| --- | --- |
+|WLCs are local | WLCs are in the cloud|
+|uses CAPWAP protocol and split-MAC architecture | CAPWAP tunneling is done over internet |
+| Ideal for large scale uniform networks | Ideal for large scale distributed networks |
 
 ### Q5 : How the CAPWAP tunnel is maintained between AP and controller
 
+The CAPWAP tunnel is maintained with the help of **KeepAlive** signals from the AP to the WLC. Also echo request is sent from the AP to the WLC to which the WLC responds to the AP with echo response.
+
 ### Q6 : Whats the difference between Sniffer and monitor mode, use case for each mode
+
+**Sniffer Mode** : The AP does not offer BSS but instead acts as a device that captures packets passively and sends them to the controller for processing.
+
+Use case : Packet capture for analysus
+
+**Monitor Mode** : The AP does not offer BSS but instead collects information about rogue devices, and other information for analytics and sends them to WLC.
+
+Use Case : RF monitoring and security
 
 ### Q7 : If WLC deployed in WAN, which AP mode is best for local network and how ?
 
-### 8: What are challenges if deploying autonomous APs (more than 50) in large network like university
+If WLC is deployed in WAN, the Cloud Based WLC can be used and the APs can be configured in FlexConnect mode. This is advantageous as the APs behave as local APs by default and switch to autonomous mode when the connection to WLC is lost.
+
+### Q8: What are challenges if deploying autonomous APs (more than 50) in large network like university
 - If deploying autonomous APs in large networks, each AP must be managed individually as they are self contained and don't rely on WLC. 
 - Each AP must have a dedicated management IP, all security parameters must be configured manually for each AP.
 - If any update is to be rolled out, each AP must be updated manually.
 - A seperate management VLAN is required to manage the APs
 
 ### Q9 : What happens on wireless client connected to Lightweight AP in local mode if WLC goes down.
+- Existing connections drop immediately as the AP cannot authenticate clients.
+- No new clients can connect to the AP as the authentication and session management is done by the WLC.
+- The AP keeps broadcasting SSIDs but no data passes through as there is not CAPWAP tunnel.
+- This can be prevented by implementing FlexConnect AP mode where the APs behave in autonomous mode when the connection to WLC is lost.
